@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   margin: 0;
@@ -29,6 +26,7 @@ a {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 .wrap {
@@ -37,18 +35,7 @@ img {
   padding: 0 32px;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #d5a83a;
-  outline-offset: 2px;
-}
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
-  }
-}
 
 /* ================= NAV ================= */
 header.nav {
@@ -118,12 +105,12 @@ ul.nav-links a:focus-visible{ outline-offset:4px; }
 .brand-word {
   font-family: "DM Sans", sans-serif;
   font-weight: 800;
-  font-size: 1.2rem;
-  color: #0f4e38;
+  font-size: 1.5rem;
+  color: #18221d;
   white-space: nowrap;
 }
 .brand-word span {
-  color: #d5a83a;
+  color: #176b4d;
 }
 
 .button {
