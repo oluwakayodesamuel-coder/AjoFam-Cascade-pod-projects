@@ -1,0 +1,264 @@
+/* =========================================
+   Detail.css
+   Page stylesheet for details.html.
+
+   Brand.css already carries the nav, footer,
+   button, and brand mark, plus a set of
+   @media rules for .hero, .hero-grid,
+   h1.headline, p.subhead, .ledger-card,
+   .ledger-head, .next-banner, .row, .stamp
+   and .avatar — but no base (desktop) styles
+   for them. This file supplies that base,
+   using only colors already defined in
+   Brand.css, so this page matches the rest
+   of the site.
+   ========================================= */
+
+:root {
+  --ink: #18221d;
+  --ink-soft: #176b4d;
+  --green: #176b4d;
+  --green-deep: #0f4e38;
+  --gold: #d5a83a;
+  --gold-soft: #ead9b3;
+  --paper: #f8f6ef;
+  --mint: #dcefe5;
+  --red: #a3492a;
+  --red-soft: #f0dcd1;
+  --line: rgba(24, 34, 29, 0.14);
+}
+
+/* ===== Layout shell ===== */
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ===== Hero / overview banner ===== */
+section.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
+  color: var(--paper);
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 7px 14px;
+  border: 1px solid rgba(248, 246, 239, 0.35);
+  border-radius: 20px;
+  background: rgba(248, 246, 239, 0.1);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h1.headline {
+  max-width: 720px;
+  color: var(--paper);
+  font-size: 3rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p.subhead {
+  max-width: 560px;
+  margin-top: 16px;
+  color: rgba(248, 246, 239, 0.82);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+p.subhead strong {
+  color: var(--paper);
+  font-weight: 700;
+}
+
+/* Metrics card sitting inside the dark hero */
+.hero .ledger-card {
+  background: rgba(248, 246, 239, 0.06);
+  border: 1px solid rgba(248, 246, 239, 0.18);
+  box-shadow: none;
+}
+
+.ledger-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 24px;
+  background: rgba(248, 246, 239, 0.08);
+  border-bottom: 1px solid rgba(248, 246, 239, 0.16);
+}
+
+.ledger-head .cycle {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--paper);
+}
+
+.ledger-head .amount {
+  font-size: 0.88rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.next-banner {
+  padding: 14px 24px;
+  background: rgba(213, 168, 58, 0.16);
+  color: var(--paper);
+  font-size: 0.92rem;
+}
+
+.next-banner strong {
+  color: var(--gold);
+}
+
+/* ===== Main content grid ===== */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+}
+
+/* Section headings used above each column */
+main h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ===== Circle parameter cards (left column) ===== */
+.problem-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+
+.problem-card h3 {
+  margin: 0 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.problem-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Member audit roll (right column) ===== */
+.hero-grid .ledger-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(24, 34, 29, 0.06);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--green-deep);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.who .name {
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: var(--ink);
+}
+
+.who .meta {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+/* ===== Status stamps ===== */
+.stamp {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.stamp.paid {
+  background: var(--mint);
+  color: var(--green-deep);
+}
+
+.stamp.next {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.stamp.pending {
+  background: var(--gold-soft);
+  color: var(--ink-soft);
+}
+
+.stamp.missed {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+/* ===== Verify / action footer section ===== */
+section.problem {
+  background: var(--mint);
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.problem h2 {
+  font-size: 1.8rem;
+}
+
+.subtext {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}

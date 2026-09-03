@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajo & Esusu Transparency — Group Detail Page</title>
+  <link rel="stylesheet" href="Css-style/Brand.css">
+  <link rel="stylesheet" href="Css-style/details.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img
+          src="image/Ajo-fam-logo.png"
+          alt="AjoFam logo"
+          width="150"
+          height="120"
+        />
+        <span class="brand-word">Ajo<span>Fam</span></span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="dashboard.html">The Main Page</a></li>
+        <li><a href="details.html" class="active" aria-current="page">The Details</a></li>
+        <li><a href="trust.html">Trust &amp; Verification</a></li>
+        <li><a href="request.html">Get Started</a></li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="button small" href="request.html">Start your Ajo group</a>
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+        ☰
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- DETAIL HEADER / OVERVIEW -->
+    <section class="hero" style="min-height: auto; padding: 48px 0;">
+      <div class="wrap">
+        <div class="hero-tag">Active Circle Detail</div>
+        <h1 class="headline">Central Market Traders — Cycle #04</h1>
+        <p class="subhead">
+          Real-time transparency ledger for <strong>12 active members</strong>. Contributions are verified weekly on-chain and recorded below.
+        </p>
+
+        <!-- CYCLE METRICS BAR -->
+        <div class="ledger-card" style="margin-top: 32px;">
+          <div class="ledger-head">
+            <span class="cycle">Total Pool Size: ₦1,200,000</span>
+            <span class="amount">Weekly Contribution: ₦100,000 / member</span>
+          </div>
+          <div class="next-banner">
+            <span>Next Payout Beneficiary: <strong>Blessing Okon (Week 5)</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN DETAIL CONTENT GRID -->
+    <section class="wrap" style="padding-bottom: 64px;">
+      <div class="hero-grid" style="align-items: start;">
+        
+        <!-- LEFT COLUMN: Circle Specifications & Rules -->
+        <div>
+          <h2 style="font-family: 'DM Sans', sans-serif; color: #0f4e38; margin-bottom: 16px;">Circle Parameters</h2>
+          <div class="problem-card" style="border-left-color: #176b4d; margin-bottom: 16px;">
+            <h3 style="color: #0f4e38;">Rotation Schedule</h3>
+            <p>Weekly payouts every Friday at 4:00 PM. All 12 contributions must be completed by Thursday midnight.</p>
+          </div>
+
+          <div class="problem-card" style="border-left-color: #d5a83a; margin-bottom: 16px;">
+            <h3 style="color: #18221d;">Collateral &amp; Verification</h3>
+            <p>Every participant has deposited a 1-week security cushion into the smart lock escrow.</p>
+          </div>
+
+          <div class="problem-card" style="border-left-color: #0f4e38;">
+            <h3 style="color: #0f4e38;">Auditor Duty</h3>
+            <p>Managed under Pod Cascade. All transactions match the primary brand sheet and ledger hashes.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Member Breakdown Ledger -->
+        <div>
+          <h2 style="font-family: 'DM Sans', sans-serif; color: #0f4e38; margin-bottom: 16px;">Member Audit Roll</h2>
+          <div class="ledger-card">
+            
+            <div class="row">
+              <div class="avatar">01</div>
+              <div class="who">
+                <div class="name">Amina Yusuf</div>
+                <div class="meta">Payout Received • Week 1</div>
+              </div>
+              <span class="stamp paid">PAID</span>
+            </div>
+
+            <div class="row">
+              <div class="avatar">02</div>
+              <div class="who">
+                <div class="name">Emeka Okafor</div>
+                <div class="meta">Payout Received • Week 2</div>
+              </div>
+              <span class="stamp paid">PAID</span>
+            </div>
+
+            <div class="row">
+              <div class="avatar">03</div>
+              <div class="who">
+                <div class="name">Kemi Adebayo</div>
+                <div class="meta">Payout Received • Week 3</div>
+              </div>
+              <span class="stamp paid">PAID</span>
+            </div>
+
+            <div class="row">
+              <div class="avatar">04</div>
+              <div class="who">
+                <div class="name">Fatima Bello</div>
+                <div class="meta">Current Beneficiary • Week 4</div>
+              </div>
+              <span class="stamp next">IN PROGRESS</span>
+            </div>
+
+            <div class="row">
+              <div class="avatar">05</div>
+              <div class="who">
+                <div class="name">Blessing Okon</div>
+                <div class="meta">Up Next • Week 5</div>
+              </div>
+              <span class="stamp pending">PENDING</span>
+            </div>
+
+            <div class="row">
+              <div class="avatar">06</div>
+              <div class="who">
+                <div class="name">Chidi Nwachukwu</div>
+                <div class="meta">Contribution Delayed • Week 4</div>
+              </div>
+              <span class="stamp missed">FLAGGED</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACTION FOOTER SECTION -->
+    <section class="problem" style="padding: 48px 0;">
+      <div class="container" style="text-align: center;">
+        <h2>Verify Your Entry on the Ledger</h2>
+        <p class="subtext" style="margin: 12px auto 24px auto;">
+          Are you a member of this circle? Check your contribution hash or report a discrepancy directly to your pod leader.
+        </p>
+        <div class="hero-ctas">
+          <a href="#" class="button">Audit Contribution Hash</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">AJO <span>&amp; ESUSU</span></div>
+          <p>Restoring community trust through transparent, immutable ROSCA ledgers.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <a href="#">Landing Page</a>
+          <a href="#">The Detail Page</a>
+          <a href="#">Trust &amp; Verification</a>
+        </div>
+        <div>
+          <h4>Pod Info</h4>
+          <p>Pod: Cascade</p>
+          <p>Duty: Detail Page Consistency Check</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ajo &amp; Esusu Pod Build. All rights reserved.</span>
+        <span>Built with HTML &amp; CSS against Brand Sheet</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
