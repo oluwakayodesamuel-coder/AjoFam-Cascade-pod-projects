@@ -65,7 +65,7 @@ section.hero {
 }
 .headline {
   font-family: "DM Sans", sans-serif;
-  color: "Inter", sans-serif;
+  color: #18221d;
   line-height: 1.15;
 }
 p.subhead {
@@ -119,6 +119,14 @@ p.subhead strong {
   border-left: 4px solid #c94c4c;
   border-radius: 4px;
   padding: 24px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-3px);
+  border-color: #176b4d;
 }
 
 .problem-card h3 {
@@ -132,7 +140,8 @@ p.subhead strong {
   opacity: 0.85;
 }
 
-<--solution section-- > .solution {
+/* solution */
+.solution {
   padding: 88px 0;
   background: #dcefe5;
 }
@@ -142,6 +151,14 @@ p.subhead strong {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 56px;
   align-items: center;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.solution:hover {
+  transform: translateY(-3px);
+  border-color: #176b4d;
 }
 
 .solution h2 {
@@ -181,7 +198,9 @@ p.subhead strong {
   background: #ffffff;
   border: 1px solid rgba(24, 34, 29, 0.1);
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(24, 34, 29, 0.08), 0 1px 0 rgba(24, 34, 29, 0.04);
+  box-shadow:
+    0 8px 24px rgba(24, 34, 29, 0.08),
+    0 1px 0 rgba(24, 34, 29, 0.04);
   overflow: hidden;
 }
 

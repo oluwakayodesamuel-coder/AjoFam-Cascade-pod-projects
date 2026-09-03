@@ -132,7 +132,8 @@ p.subhead strong {
   opacity: 0.85;
 }
 
-<--solution section-- > .solution {
+/* solution */
+.solution {
   padding: 88px 0;
   background: #dcefe5;
 }

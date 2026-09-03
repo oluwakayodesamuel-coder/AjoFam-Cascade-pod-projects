@@ -70,8 +70,15 @@ header.nav {
   list-style:none;
   margin:0;
   padding:0;
+  transition:
+  transform 0.2s ease,
+  border-color 0.2s ease;
 }
 
+.nav-links a:hover {
+  transform: translateY(-3px);
+  border-color: #176b4d;
+}
 ul.nav-links a{
   font-family:'Inter', sans-serif;
   font-weight:550;
@@ -144,6 +151,11 @@ ul.nav-links a:focus-visible{ outline-offset:4px; }
   }
   h1.headline {
     font-size: 2.5rem;
+  }
+  .nav-inner {
+    padding: 12px 20px;
+    gap: 20px;
+    align-items: center;
   }
 }
 
