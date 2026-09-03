@@ -325,6 +325,215 @@ footer {
   border-top: 1px solid var(--paper-line);
 }
 
+/* =========================================================
+   RESPONSIVE
+   Mobile-first. Base rules above target small phones
+   (~360–479px). Each breakpoint below scales type,
+   rhythm and component sizing up in step — never just
+   "bigger" for its own sake. --max is redefined at each
+   tier so .wrap and footer track the same content width
+   without duplicating layout rules.
+   ========================================================= */
+
+/* ---- Sub-360 phones (iPhone SE / older Android) ---- */
+@media (max-width: 359px) {
+  .wrap {
+    padding: 0 16px 48px;
+  }
+  .hero {
+    padding: 20px 18px 18px;
+    border-radius: 14px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero .meta-row {
+    gap: 12px;
+  }
+  .hero .meta .num {
+    font-size: 16px;
+  }
+  section {
+    margin-top: 32px;
+  }
+  section > h2 {
+    font-size: 17px;
+  }
+  .rot-name,
+  .contrib-name {
+    font-size: 13.5px;
+  }
+  .stamp {
+    font-size: 10px;
+    padding: 4px 9px;
+  }
+  .contrib-summary {
+    gap: 8px;
+  }
+  .sum-chip {
+    padding: 8px 6px;
+  }
+  .sum-chip .n {
+    font-size: 17px;
+  }
+  .faq summary {
+    font-size: 14px;
+  }
+}
+
+/* ---- Large phones / phablets, landscape handsets ---- */
+@media (min-width: 480px) {
+  .wrap {
+    padding: 0 24px 72px;
+  }
+  .hero {
+    padding: 30px 26px 28px;
+  }
+  .contrib-summary {
+    gap: 12px;
+  }
+  .sum-chip {
+    padding: 12px 14px;
+  }
+}
+
+/* ---- Small tablets (large phablets, iPad Mini portrait) ---- */
+@media (min-width: 640px) {
+  :root {
+    --max: 660px;
+  }
+  .wrap {
+    padding: 0 28px 80px;
+  }
+}
+
+/* ---- Tablets (iPad portrait and similar) ---- */
+@media (min-width: 768px) {
+  :root {
+    --max: 700px;
+  }
+  header.brand {
+    padding: 36px 0 24px;
+  }
+  .hero {
+    margin-top: 28px;
+    padding: 34px 32px 32px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+  .hero .eyebrow {
+    font-size: 14px;
+  }
+  .hero .meta-row {
+    gap: 24px;
+  }
+  .hero .meta .num {
+    font-size: 21px;
+  }
+  section {
+    margin-top: 48px;
+  }
+  section > h2 {
+    font-size: 21px;
+  }
+  section > .lede {
+    font-size: 14.5px;
+  }
+  .rot-pos {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .rot-name,
+  .contrib-name {
+    font-size: 15px;
+  }
+  .rule p,
+  .faq details p {
+    font-size: 15px;
+  }
+  .faq summary {
+    font-size: 16px;
+  }
+  .sum-chip .n {
+    font-size: 22px;
+  }
+}
+
+/* ---- Small laptops / tablets landscape ---- */
+@media (min-width: 1024px) {
+  :root {
+    --max: 760px;
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+  .hero .meta .num {
+    font-size: 22px;
+  }
+  section {
+    margin-top: 56px;
+  }
+  section > h2 {
+    font-size: 22px;
+  }
+  .rule {
+    padding: 18px 0;
+  }
+  .rule .idx {
+    font-size: 15px;
+  }
+  .faq details {
+    padding: 18px 0;
+  }
+}
+
+/* ---- Laptops / standard desktop monitors ---- */
+@media (min-width: 1280px) {
+  :root {
+    --max: 820px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .hero .eyebrow {
+    font-size: 15px;
+  }
+  section > h2 {
+    font-size: 23px;
+  }
+  .rot-row,
+  .contrib-row {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+}
+
+/* ---- Large / high-resolution desktop displays ---- */
+@media (min-width: 1440px) {
+  :root {
+    --max: 860px;
+  }
+  body {
+    font-size: 16.5px;
+  }
+}
+
+/* ---- Short-viewport landscape (handsets, small laptops) ---- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero {
+    padding: 18px 22px;
+  }
+  .hero h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  section {
+    margin-top: 28px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .faq summary .plus {
     transition: none;

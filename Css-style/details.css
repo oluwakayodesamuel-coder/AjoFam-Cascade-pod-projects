@@ -262,3 +262,142 @@ section.problem h2 {
   flex-wrap: wrap;
   gap: 14px;
 }
+
+
+@media (min-width: 1400px) {
+
+  h1.headline {
+    font-size: 3.4rem;
+  }
+  .hero-grid {
+    gap: 64px;
+  }
+}
+
+@media (max-width: 1024px) {
+ 
+  main h2 {
+    font-size: 1.3rem;
+  }
+  .problem-card {
+    padding: 18px 20px;
+  }
+  .row {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .hero-tag {
+    margin-bottom: 14px;
+  }
+  .hero .ledger-card {
+    margin-top: 8px;
+  }
+  .ledger-head {
+    padding: 16px 18px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  
+  .hero-tag {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+  }
+  .problem-card {
+    padding: 16px 18px;
+    border-left-width: 3px;
+  }
+  .who .name {
+    font-size: 0.92rem;
+  }
+  .who .meta {
+    font-size: 0.76rem;
+  }
+  .stamp {
+    font-size: 0.68rem;
+    padding: 5px 11px;
+  }
+  section.problem h2 {
+    font-size: 1.5rem;
+  }
+  .subtext {
+    font-size: 0.96rem;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .hero-ctas .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-tag {
+    font-size: 0.68rem;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+  }
+  p.subhead {
+    font-size: 0.95rem;
+  }
+  .ledger-head .cycle {
+    font-size: 0.92rem;
+  }
+  .ledger-head .amount {
+    font-size: 0.8rem;
+  }
+  .next-banner {
+    font-size: 0.8rem;
+  }
+  .problem-card {
+    padding: 14px 16px;
+  }
+  .problem-card h3 {
+    font-size: 0.98rem;
+  }
+  .problem-card p {
+    font-size: 0.88rem;
+  }
+  .who .name {
+    font-size: 0.88rem;
+  }
+  .who .meta {
+    font-size: 0.72rem;
+  }
+  .stamp {
+    font-size: 0.64rem;
+    padding: 4px 9px;
+  }
+  section.problem h2 {
+    font-size: 1.3rem;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .hero-ctas {
+    gap: 10px;
+  }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero-tag {
+    margin-bottom: 10px;
+  }
+  h1.headline {
+    font-size: 1.8rem;
+  }
+  p.subhead {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+  .hero .ledger-card {
+    margin-top: 16px;
+  }
+}
