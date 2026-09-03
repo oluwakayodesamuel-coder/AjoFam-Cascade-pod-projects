@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJOFAM — Contribution Circle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0F2438;
+    --ink-soft: #2B3F52;
+    --green: #2E7D4F;
+    --green-deep: #1F5C39;
+    --amber: #D89A22;
+    --red: #B3413A;
+    --paper: #FAF8F3;
+    --paper-line: #E4DCC9;
+    --card: #FFFFFF;
+    --max: 640px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .num {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px 64px;
+  }
+
+  /* ---------- Header ---------- */
+  header.brand {
+    padding: 28px 20px 20px;
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  header.brand .mark {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  header.brand .mark span { color: var(--green); }
+  header.brand .leader {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-align: right;
+    line-height: 1.35;
+  }
+
+  /* ---------- Hero: who's next ---------- */
+  .hero {
+    margin-top: 22px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 18px;
+    padding: 26px 22px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -30px; top: -30px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,125,79,0.55), transparent 70%);
+  }
+  .hero .eyebrow {
+    font-size: 13px;
+    color: #9FD8B8;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    font-weight: 600;
+    position: relative;
+  }
+  .hero .meta-row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .hero .meta {
+    font-size: 13px;
+    color: #C7D3DC;
+  }
+  .hero .meta .num {
+    display: block;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  /* ---------- Section shell ---------- */
+  section { margin-top: 40px; }
+  section > h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  section > .lede {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+
+  /* ---------- Rotation list ---------- */
+  .rotation {
+    border-top: 1px solid var(--paper-line);
+  }
+  .rot-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .rot-pos {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #ECE7DA;
+    color: var(--ink-soft);
+  }
+  .rot-row.done .rot-pos { background: var(--green); color: #fff; }
+  .rot-row.current .rot-pos { background: var(--amber); color: #fff; }
+  .rot-row.current { background: #FDF6E7; margin: 0 -14px; padding: 12px 14px; border-radius: 12px; border-bottom: 1px solid transparent; }
+  .rot-name { font-size: 14.5px; font-weight: 500; flex: 1; }
+  .rot-tag {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .rot-row.done .rot-tag { color: var(--green-deep); }
+  .rot-row.current .rot-tag { color: #9A6A0C; }
+
+  /* ---------- Contribution table ---------- */
+  .contrib { border-top: 1px solid var(--paper-line); }
+  .contrib-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 2px;
+    border-bottom: 1px solid var(--paper-line);
+    gap: 12px;
+  }
+  .contrib-name { font-size: 14.5px; font-weight: 500; }
+  .contrib-sub { font-size: 12px; color: var(--ink-soft); margin-top: 1px; }
+  .stamp {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 5px 11px;
+    border-radius: 20px;
+    border: 1.6px solid currentColor;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .stamp.paid { color: var(--green-deep); }
+  .stamp.pending { color: #6A9835; }
+  .stamp.missed { color: var(--.blue); }
+
+  .contrib-summary {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .sum-chip {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--paper-line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .sum-chip .n { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 600; }
+  .sum-chip .l { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ---------- Rules ---------- */
+  .rules-list { list-style: none; margin: 0; padding: 0; }
+  .rule {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--paper-line);
+  }
+  .rule:first-child { padding-top: 0; }
+  .rule .idx {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: var(--green);
+    font-size: 14px;
+    flex-shrink: 0;
+    width: 20px;
+  }
+  .rule p { margin: 0; font-size: 14.5px; }
+  .rule strong { color: var(--ink); }
+
+  /* ---------- FAQ ---------- */
+  .faq details {
+    border-bottom: 1px solid var(--paper-line);
+    padding: 15px 0;
+  }
+  .faq details:first-child { padding-top: 0; }
+  .faq summary {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .plus {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+    transition: transform 0.15s ease;
+  }
+  .faq details[open] summary .plus { transform: rotate(45deg); }
+  .faq details p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .faq details:focus-within summary,
+  .faq summary:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  footer {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 30px 20px 40px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--paper-line);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq summary .plus { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="brand">
+  <div class="mark">AJO<span>FAM</span></div>
+  <div class="leader">Coordinator<br>Oluwakayode Samuel Ojo</div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO: whose turn is next, front and center -->
+  <div class="hero">
+    <p class="eyebrow">Next to collect — this Friday</p>
+    <h1>Iya Alata</h1>
+    <div class="meta-row">
+      <div class="meta">Week<span class="num">6 of 10</span></div>
+      <div class="meta">Amount collected<span class="num">₦150,000</span></div>
+      <div class="meta">Position<span class="num">6th in line</span></div>
+    </div>
+  </div>
+
+  <!-- ROTATION ORDER -->
+  <section>
+    <h2>Rotation order</h2>
+    <p class="lede">Fixed at the start of the cycle. Nobody moves up except by the missed-payment rule below.</p>
+    <div class="rotation">
+      <div class="rot-row done"><div class="rot-pos">1</div><div class="rot-name">Mama Ngozi</div><div class="rot-tag">Collected, wk 1</div></div>
+      <div class="rot-row done"><div class="rot-pos">2</div><div class="rot-name">Tunde èlérán</div><div class="rot-tag">Collected, wk 2</div></div>
+      <div class="rot-row done"><div class="rot-pos">3</div><div class="rot-name">iya mulika</div><div class="rot-tag">Collected, wk 3</div></div>
+      <div class="rot-row done"><div class="rot-pos">4</div><div class="rot-name">Emeka Obi</div><div class="rot-tag">Collected, wk 4</div></div>
+      <div class="rot-row done"><div class="rot-pos">5</div><div class="rot-name">Brother uche</div><div class="rot-tag">Collected, wk 5</div></div>
+      <div class="rot-row current"><div class="rot-pos">6</div><div class="rot-name">Iya Alata</div><div class="rot-tag">Collecting now</div></div>
+      <div class="rot-row"><div class="rot-pos">7</div><div class="rot-name">Ibrahim Suleiman</div><div class="rot-tag">Upcoming</div></div>
+      <div class="rot-row"><div class="rot-pos">8</div><div class="rot-name">ogunmolawa ajumobi</div><div class="rot-tag">Upcoming</div></div>
+      <div class="rot-row"><div class="rot-pos">9</div><div class="rot-name">Ajumobi daniel</div><div class="rot-tag">Upcoming</div></div>
+      <div class="rot-row"><div class="rot-pos">10</div><div class="rot-name">Michael wisdom</div><div class="rot-tag">Upcoming</div></div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUTIONS THIS CYCLE -->
+  <section>
+    <h2>This week's contributions</h2>
+    <p class="lede">Everyone pays every week, whether or not it's already been their turn to collect.</p>
+    <div class="contrib">
+      <div class="contrib-row"><div><div class="contrib-name">Ngozi Adeyemi</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Tunde Bakare</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Amaka Chukwu</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Emeka Obi</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Funmilayo Aina</div><div class="contrib-sub">Said she'll pay Saturday</div></div><span class="stamp pending">PENDING</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Chidinma Okafor</div><div class="contrib-sub">Pays in same as everyone, even while collecting</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Ibrahim Suleiman</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Blessing Nwosu</div><div class="contrib-sub">Also missed wk 5 — one more miss moves her to position 10</div></div><span class="stamp missed">MISSED</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Segun Adewale</div></div><span class="stamp paid">PAID</span></div>
+      <div class="contrib-row"><div><div class="contrib-name">Halima Yusuf</div></div><span class="stamp paid">PAID</span></div>
+    </div>
+    <div class="contrib-summary">
+      <div class="sum-chip"><div class="n">8</div><div class="l">Paid</div></div>
+      <div class="sum-chip"><div class="n">1</div><div class="l">Pending</div></div>
+      <div class="sum-chip"><div class="n">1</div><div class="l">Missed</div></div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section>
+    <h2>How this group runs</h2>
+    <p class="lede">Written once, the same for everyone, for the length of this cycle.</p>
+    <ol class="rules-list">
+      <li class="rule"><span class="idx">1</span><p><strong>₦15,000, every Friday</strong>, cash or bank transfer to Oluwakayode. Ten members, ten weeks, one full cycle.</p></li>
+      <li class="rule"><span class="idx">2</span><p><strong>The order is fixed.</strong> It was set before week 1 and doesn't change on request — only the missed-payment rule below can move someone.</p></li>
+      <li class="rule"><span class="idx">3</span><p><strong>A missed payment doesn't disappear.</strong> It's added to the following Friday. Miss once, you owe ₦30,000 next time.</p></li>
+      <li class="rule"><span class="idx">4</span><p><strong>Two misses in a row moves you to the back.</strong> You drop to the last position in the rotation; whoever was after you moves up.</p></li>
+      <li class="rule"><span class="idx">5</span><p><strong>Collecting your payout doesn't end your payments.</strong> You keep contributing every week until the whole cycle finishes.</p></li>
+      <li class="rule"><span class="idx">6</span><p><strong>The cycle closes after week 10.</strong> Once everyone's collected, the group meets to confirm every account is clear before starting again.</p></li>
+    </ol>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>Questions people actually ask</h2>
+    <p class="lede">If yours isn't here, ask Oluwakayode directly and it'll get added.</p>
+
+    <details>
+      <summary>I already collected my payout. Do I still have to pay every week?<span class="plus">+</span></summary>
+      <p>Yes. Your turn being over doesn't mean you're done — you pay until week 10, same as everyone else. The rotation only decides when you receive money, not when you stop putting it in.</p>
+    </details>
+
+    <details>
+      <summary>What happens if I miss a Friday?<span class="plus">+</span></summary>
+      <p>It doesn't vanish. It gets added to whatever you owe the following Friday. Miss once, you pay double next time.</p>
+    </details>
+
+    <details>
+      <summary>What if I miss twice in a row?<span class="plus">+</span></summary>
+      <p>You lose your place in line. Whoever's turn was right after yours moves up, and you go to the back — position 10.</p>
+    </details>
+
+    <details>
+      <summary>Can I swap my collection turn with someone else?<span class="plus">+</span></summary>
+      <p>Only if you both agree and tell Oluwakayode before the cycle starts. Once the order is set and week 1 has paid out, it's locked for everyone.</p>
+    </details>
+
+    <details>
+      <summary>I need my payout early — can I ask for it before my turn?<span class="plus">+</span></summary>
+      <p>No. The whole point of ajo is that everyone waits their turn. Asking to jump the line is asking someone else to wait longer for money they were already counting on.</p>
+    </details>
+
+    <details>
+      <summary>How do I know my payment actually reached Oluwakayode and got recorded?<span class="plus">+</span></summary>
+      <p>Check this page after you pay. If your name shows a green "PAID" stamp for the week, it's recorded. A transfer screenshot on its own isn't proof until it shows up here.</p>
+    </details>
+
+    <details>
+      <summary>What if Oluwakayode misses a week?<span class="plus">+</span></summary>
+      <p>Same rule as everyone. He pays into the pot every Friday like the rest of us, and he's on the rotation too — a missed payment from him follows the exact same catch-up rule.</p>
+    </details>
+
+    <details>
+      <summary>The book — or this page — and my memory disagree. Whose word counts?<span class="plus">+</span></summary>
+      <p>This page. It's updated the same day money moves, in front of whoever's around, so there's no gap for anyone to misremember later.</p>
+    </details>
+
+    <details>
+      <summary>What happens when we reach week 10 and everyone's collected?<span class="plus">+</span></summary>
+      <p>The cycle closes. We meet, confirm every account is settled, and decide together whether to start a new cycle with the same order or shuffle it.</p>
+    </details>
+
+    <details>
+      <summary>Can someone new join partway through a cycle?<span class="plus">+</span></summary>
+      <p>Not as a collector — that would mean someone already in line waits even longer for their turn. New members join at the start of the next cycle, added to a fresh order.</p>
+    </details>
+
+    <details>
+      <summary>I'm collecting this week but I also owe last week's missed payment — what happens to that?<span class="plus">+</span></summary>
+      <p>You still owe it. Collecting your payout doesn't cancel a debt to the pot — it's settled alongside your collection, so the total stays correct for the members still waiting their turn.</p>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  AJOFAM — one group, one page, updated the day money moves.
+</footer>
+
+</body>
+</html>
