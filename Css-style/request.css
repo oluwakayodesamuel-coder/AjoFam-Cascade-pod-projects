@@ -23,6 +23,7 @@ html { scroll-behavior: smooth; }
   max-width: 760px;
   margin: 0 auto;
   padding: 0 20px;
+  gap: 12px;
 }
 
 a { color: inherit; }
@@ -202,6 +203,7 @@ a { color: inherit; }
   padding-top: 52px;
   padding-bottom: 8px;
   margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .section-head {
