@@ -1,18 +1,4 @@
-/* =========================================
-   Detail.css
-   Page stylesheet for details.html.
 
-   Brand.css already carries the nav, footer,
-   button, and brand mark, plus a set of
-   @media rules for .hero, .hero-grid,
-   h1.headline, p.subhead, .ledger-card,
-   .ledger-head, .next-banner, .row, .stamp
-   and .avatar — but no base (desktop) styles
-   for them. This file supplies that base,
-   using only colors already defined in
-   Brand.css, so this page matches the rest
-   of the site.
-   ========================================= */
 
 :root {
   --ink: #18221d;

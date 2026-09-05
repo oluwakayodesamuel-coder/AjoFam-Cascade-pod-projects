@@ -148,6 +148,7 @@ ul.nav-links a.active::after {
   border: 1px solid #176b4d;
   cursor: pointer;
   white-space: nowrap;
+  margin-left: 10px;
 }
 .button:hover {
   background: #0f4e38;
@@ -394,8 +395,85 @@ footer.site-footer {
   font-size: 0.85rem;
   color: #dcefe5;
 }
+/* Large desktops / wide screens */
+@media (min-width: 1440px) {
+  .footer-grid {
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Standard desktops / laptops */
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+/* Small laptops / large tablets (landscape) */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Tablets (portrait) */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Large mobile / small tablets */
 @media (max-width: 700px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Standard mobile phones */
+@media (max-width: 480px) {
+  footer.site-footer {
+    padding: 32px 0 20px;
+  }
+  .footer-brand {
+    font-size: 1rem;
+  }
+  .footer-grid h4 {
+    font-size: 0.78rem;
+    margin-bottom: 10px;
+  }
+  .footer-grid p,
+  .footer-grid a {
+    font-size: 0.88rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  footer.site-footer {
+    padding: 24px 0 16px;
+  }
+  .footer-grid {
+    gap: 20px;
+  }
+  .footer-brand {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 800px) {

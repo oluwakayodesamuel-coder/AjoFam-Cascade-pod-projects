@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AjoFam — Everyone knows where they stand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css-style/Brand.css" />
+    <link rel="stylesheet" href="Css-style/pod.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="image/Ajo-fam-logo.png"
+            alt="AjoFam logo"
+            width="150"
+            height="120"
+          />
+          <span class="brand-word">Ajo<span>Fam</span></span>
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="problem.html">The Problem</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="dashboard.html">The Main Page</a></li>
+          <li><a href="details.html">The Details</a></li>
+          <li><a href="trust.html">Trust &amp; Verification</a></li>
+          <li><a href="request.html">Get Started</a></li>
+          <li><a href="faq.html">Guide &amp; FAQ</a></li>
+          <li>
+            <a href="pod.html" class="active" aria-current="page">The Pod</a>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a class="button small" href="request.html">Start your Ajo group</a>
+        <label
+          for="nav-toggle"
+          class="nav-toggle-label"
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </label>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- RECORD: the product's real artifact, shown first -->
+      <section class="record-section wrap" aria-labelledby="record-heading">
+        <div class="record-intro">
+          <h1 id="record-heading">Everyone knows where they stand.</h1>
+          <p>
+            AjoFam turns your group's notebook, spreadsheet, and WhatsApp
+            messages into one shared record — the rotation, the payments,
+            and the rules, all in one place.
+          </p>
+          <div class="record-actions">
+            <a class="button" href="request.html">Start your Ajo group</a>
+            <a class="button ghost" href="how-it-works.html">See how it works</a>
+          </div>
+        </div>
+
+        <div class="ledger">
+          <div class="ledger-heading">
+            <h2>Umuada Traders Group</h2>
+            <span class="cycle-label">Cycle 5 of 12</span>
+          </div>
+          <table class="ledger-table">
+            <thead>
+              <tr>
+                <th scope="col" class="col-turn">Turn</th>
+                <th scope="col">Member</th>
+                <th scope="col" class="col-status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-turn">1</td>
+                <td class="col-member">Ngozi</td>
+                <td class="col-status"><span class="stamp paid">✓ Paid</span></td>
+              </tr>
+              <tr>
+                <td class="col-turn">2</td>
+                <td class="col-member">Chidi</td>
+                <td class="col-status"><span class="stamp paid">✓ Paid</span></td>
+              </tr>
+              <tr>
+                <td class="col-turn">3</td>
+                <td class="col-member">Amaka</td>
+                <td class="col-status"><span class="stamp next">★ Next to collect</span></td>
+              </tr>
+              <tr>
+                <td class="col-turn">4</td>
+                <td class="col-member">Tunde</td>
+                <td class="col-status"><span class="stamp pending">● Pending</span></td>
+              </tr>
+              <tr>
+                <td class="col-turn">5</td>
+                <td class="col-member">Ifeoma</td>
+                <td class="col-status"><span class="stamp missed">✕ Missed</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="ledger-legend">
+            <span class="stamp paid">✓ Paid</span>
+            <span class="stamp pending">● Pending</span>
+            <span class="stamp missed">✕ Missed</span>
+            <span class="stamp next">★ Next to collect</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS: the rotation, made visible -->
+      <section class="loop-section" id="how-it-works" aria-labelledby="loop-heading">
+        <div class="wrap loop-grid">
+          <div class="loop-copy">
+            <h2 id="loop-heading">The loop, made visible</h2>
+            <p>
+              Ajo runs in a loop — contribute, wait your turn, collect, then
+              start again. AjoFam shows exactly where your group is in that
+              loop, so nobody has to ask.
+            </p>
+          </div>
+          <div class="loop-diagram">
+            <svg viewBox="0 0 340 340" role="img" aria-labelledby="loop-svg-title">
+              <title id="loop-svg-title">The Ajo loop: contribute, wait, collect, repeat</title>
+              <circle cx="170" cy="170" r="118" fill="none" stroke="#DCEFE5" stroke-width="14"/>
+              <circle cx="170" cy="170" r="118" fill="none" stroke="#176B4D" stroke-width="14"
+                      stroke-dasharray="60 20 60 20 60 20 60 20" stroke-linecap="round"/>
+              <g class="loop-arrowhead">
+                <path d="M275 100 L292 108 L280 122 Z" fill="#176B4D"/>
+              </g>
+              <g font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#18221D">
+                <text x="170" y="34" text-anchor="middle">Contribute</text>
+                <text x="306" y="176" text-anchor="middle">Wait</text>
+                <text x="170" y="322" text-anchor="middle">Collect</text>
+                <text x="40" y="176" text-anchor="middle">Repeat</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCOUNTABILITY: facts, not shame -->
+      <section class="accountability-section" id="accountability" aria-labelledby="accountability-heading">
+        <div class="wrap accountability-inner">
+          <div class="accountability-copy">
+            <h2 id="accountability-heading">Missed payments, without the shame</h2>
+            <p>
+              When someone misses a contribution, AjoFam records it as a
+              fact — not a public callout. Everyone can see what was due,
+              what the group agreed happens next, and what's needed to catch
+              up.
+            </p>
+          </div>
+          <div class="note-card">
+            <div class="note-status">✕ Missed — Cycle 5</div>
+            <p><strong>Ifeoma</strong> · ₦15,000 contribution</p>
+            <p>Due 28 August, not yet received.</p>
+            <div class="rule-line">
+              Group rule: contribution due within 3 days, or the turn passes
+              to the next member.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLOSING / MISSION -->
+      <section class="closing-section" id="get-started" aria-labelledby="closing-heading">
+        <div class="wrap closing-inner">
+          <div class="mark">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M25 16a9 9 0 1 1-3.5-7.1" stroke="#F8F6EF" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M25 16 L21 12.5 M25 16 L20.5 17.5" stroke="#F8F6EF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <blockquote id="closing-heading">"Ajo should be easy to understand, even when the money is not yours alone."</blockquote>
+          <p class="support">
+            AjoFam isn't trying to change how people save together. It's
+            simply making the contributions, rotation and rules easier for
+            everyone to see.
+          </p>
+          <a class="button" href="request.html">Start your Ajo group</a>
+          <p class="tagline">Your contribution. Your turn. Your record.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">Ajo<span>Fam</span></div>
+            <p>Your contribution. Your turn. Your record.</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
+            <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
+          </div>
+          <div>
+            <h4>Navigate</h4>
+            <a href="index.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 AjoFam</span>
+          <span>A simple digital home for Ajo groups.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
