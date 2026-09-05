@@ -1,6 +1,6 @@
 # AjoFam
 
-![AjoFam Logo](Image/ajofam-logo.png)
+![AjoFam Logo](Image/Ajo-fam-logo.png)
 
 **Your contribution. Your turn. Your record.**
 *A simple digital home for Ajo groups.*
