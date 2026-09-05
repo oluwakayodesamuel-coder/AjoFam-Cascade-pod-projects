@@ -1,5 +1,7 @@
 # AjoFam
 
+![AjoFam Logo](Image/ajofam-logo.png)
+
 **Your contribution. Your turn. Your record.**
 *A simple digital home for Ajo groups.*
 
@@ -85,4 +87,3 @@ The name comes from "Ajo" + "Fam" (Family) — a trusted financial family. The b
 ---
 
 *AjoFam isn't trying to change how people save together — it's simply making the contributions, rotation, and rules easier for everyone to see.*
-
