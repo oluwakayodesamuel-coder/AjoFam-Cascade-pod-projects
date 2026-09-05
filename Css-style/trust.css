@@ -28,7 +28,6 @@ section.hero {
   min-height: calc(100vh - 73px);
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 .hero-grid {
   width: 100%;
