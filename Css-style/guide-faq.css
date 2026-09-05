@@ -13,6 +13,17 @@
   --card: #ffffff;
   --max: 700px;
 }
+body {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 39px,
+      rgba(24, 34, 29, 0.1) 39px,
+      rgba(24, 34, 29, 0.1) 40px
+    ),
+    #f8f6ef;
+}
 
 * {
   box-sizing: border-box;
@@ -37,6 +48,7 @@ h3,
   margin: 0 auto;
   padding: 0 24px 72px;
 }
+
 
 header.brand {
   padding: 28px 0 20px;
@@ -119,12 +131,23 @@ header.brand .leader {
 }
 
 section {
+  display: flex;
+  border-radius: 12px;
+  padding: 28px 32px;
+  flex-direction: column;
+  background-color: var(--paper);
   margin-top: 48px;
+  box-shadow:
+    0 8px 24px rgba(24, 34, 29, 0.08),
+    0 1px 0 rgba(24, 34, 29, 0.04);
+  border: 1px solid var(--paper-line);
 }
 section > h2 {
   font-size: 21px;
   font-weight: 700;
   margin: 0 0 4px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 100%);
+  -webkit-background-clip: text;
 }
 section > .lede {
   font-size: 14.5px;

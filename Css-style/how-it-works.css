@@ -21,7 +21,15 @@ INTRO
 
 .intro {
   padding: 96px 0;
-  background: #f8f6ef;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 39px,
+      rgba(24, 34, 29, 0.1) 39px,
+      rgba(24, 34, 29, 0.1) 40px
+    ),
+    #f8f6ef;
 }
 
 .intro-grid {
