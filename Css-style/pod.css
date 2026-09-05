@@ -24,6 +24,15 @@
 html {
   scroll-behavior: smooth;
 }
+body {background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 39px,
+      rgba(24, 34, 29, 0.1) 39px,
+      rgba(24, 34, 29, 0.1) 40px
+    ),
+    #f8f6ef;}
 
 .wrap {
   max-width: var(--max-width);
