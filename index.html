@@ -1,231 +1,423 @@
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AjoFam — Your contribution. Your turn. Your record.</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AjoFam &mdash; Everyone knows where they stand</title>
+    <meta name="description" content="AjoFam is a simple digital home for ajo, esusu and adashe groups. One shared record of who has paid, who collects next, and what happens when a contribution is missed." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="AjoFam &mdash; Everyone knows where they stand" />
+    <meta property="og:description" content="AjoFam is a simple digital home for ajo, esusu and adashe groups. One shared record of who has paid, who collects next, and what happens when a contribution is missed." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="Css-style/Brand.css" />
     <link rel="stylesheet" href="Css-style/landing.css" />
   </head>
   <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <img
-        src="image/Ajo-fam-logo.png"
-        alt="AjoFam logo"
-        width="150"
-        height="120"
-      />
-      <span class="brand-word">Ajo<span>Fam</span></span>
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <ul class="nav-links">
-      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-      <li><a href="problem.html">The Problem</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="dashboard.html">The Main Page</a></li>
-      <li><a href="details.html">The Details</a></li>
-      <li><a href="trust.html">Trust &amp; Verification</a></li>
-      <li><a href="request.html">Get Started</a></li>
-      <li><a href="faq.html">Guide &amp; FAQ</a></li>
-      <li><a href="pod.html">The Pod</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="button small" href="request.html">Start your Ajo group</a>
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-      ☰
-    </label>
-  </div>
-</header>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
- <main id="top">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item-has-sub">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
+        </ul>
+
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
+
+    <main id="main">
       <section class="hero">
         <div class="wrap hero-grid">
-          <div>
-            <div class="eyebrow-line">
-              <span class="mark">↻</span> For ajo and adashe groups
-            </div>
-            <h1 class="headline">
-              YOUR AJO, WRITTEN DOWN ONCE — AND SEEN BY EVERYONE.
-            </h1>
-            <p class="subhead">
-              <span class="hero-tag">For Market Traders · Artisans · Salary Earners</span>
-              AjoFam replaces the notebook, the WhatsApp threads, and the
-            coordinator's memory with one shared record everyone can see — who's
-            paid, who's next, and what happens when a contribution is missed.
+          <div class="hero-copy">
+            <p class="kicker">For ajo, esusu and adashe groups</p>
+            <h1>Everyone knows where they stand.</h1>
+            <p class="hero-sub">
+              AjoFam replaces the notebook, the WhatsApp thread and the
+              coordinator&rsquo;s memory with one shared record every member can
+              see &mdash; who has paid, who collects next, and what happens when
+              a contribution is missed.
             </p>
-            <div class="hero-ctas">
-              <a class="button" href="request.html">Start your Ajo group</a>
+            <div class="button-row">
+              <a class="button has-arrow" href="request.html">Start your Ajo group</a>
+              <a class="button ghost" href="how-it-works.html">See how it works</a>
             </div>
             <p class="hero-note">
-              No spreadsheets. No new terms to learn — just paid, pending,
-              missed, and next.
+              No spreadsheets. No new words to learn &mdash; just paid, pending,
+              missed and next.
+            </p>
+            <ul class="hero-audience">
+              <li>Market traders</li>
+              <li>Artisans</li>
+              <li>Salary earners</li>
+              <li>Family groups</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <article class="ledger-card" aria-labelledby="hero-ledger-title">
+              <header class="ledger-head">
+                <span class="ledger-title" id="hero-ledger-title">Iwo Road Traders</span>
+                <span class="ledger-amount">&#8358;5,000 &middot; weekly</span>
+              </header>
+              <p class="next-banner">Next to collect: Daniel Oluwatosin, this Friday</p>
+
+              <div class="ledger-rows">
+                <div class="ledger-row">
+                  <span class="avatar" aria-hidden="true">OS</span>
+                  <span>
+                    <span class="ledger-name">Oluwakayode Samuel</span>
+                    <span class="ledger-meta">Paid 3 February</span>
+                  </span>
+                  <span class="stamp paid">Paid</span>
+                </div>
+                <div class="ledger-row is-highlight">
+                  <span class="avatar is-next" aria-hidden="true">DO</span>
+                  <span>
+                    <span class="ledger-name">Daniel Oluwatosin</span>
+                    <span class="ledger-meta">Seat 4 &middot; collects this cycle</span>
+                  </span>
+                  <span class="stamp next">Next</span>
+                </div>
+                <div class="ledger-row">
+                  <span class="avatar" aria-hidden="true">OK</span>
+                  <span>
+                    <span class="ledger-name">Ogunlade Korede</span>
+                    <span class="ledger-meta">Due 9 February</span>
+                  </span>
+                  <span class="stamp pending">Pending</span>
+                </div>
+                <div class="ledger-row">
+                  <span class="avatar is-missed" aria-hidden="true">AH</span>
+                  <span>
+                    <span class="ledger-name">Akinade Hassan</span>
+                    <span class="ledger-meta">Carries over to next week</span>
+                  </span>
+                  <span class="stamp missed">Missed</span>
+                </div>
+                <div class="ledger-row">
+                  <span class="avatar" aria-hidden="true">OR</span>
+                  <span>
+                    <span class="ledger-name">Ogunniyi Roseline</span>
+                    <span class="ledger-meta">Due 9 February</span>
+                  </span>
+                  <span class="stamp pending">Pending</span>
+                </div>
+              </div>
+
+              <footer class="ledger-foot">
+                <span>Cycle 1 of 4 &middot; 5 seats</span>
+                <strong>&#8358;25,000 pot</strong>
+              </footer>
+            </article>
+            <p class="hero-caption">
+              A live example. This is the whole product &mdash; one page the
+              group agrees on.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight questions-band">
+        <div class="wrap">
+          <p class="kicker">Every AjoFam page answers four questions</p>
+          <ol class="questions">
+            <li><span>01</span> Who is collecting next?</li>
+            <li><span>02</span> Who has contributed?</li>
+            <li><span>03</span> Where are we in the rotation?</li>
+            <li><span>04</span> What happens if someone misses?</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The problem</p>
+            <h2>What the notebook can&rsquo;t do</h2>
+            <p class="lede">
+              These are the moments coordinators hit every cycle &mdash; not
+              hypothetical pain points, the real ones.
             </p>
           </div>
 
-         <div
-            class="ledger-card"
-            aria-label="Sample AjoFam contribution record"
-          >
-            <div class="ledger-head">
-              <span class="cycle">▤ Cycle 1 of 4</span>
-              <span class="amount">₦5,000 per member</span>
-            </div>
-            <div class="next-banner">
-              → Next to collect: Daniel Oluwatosin, this Friday
-            </div>
-            <div class="rows">
-              <div class="row">
-                <div class="avatar">OS</div>
-                <div class="who">
-                  <div class="name">Oluwakayode Samuel Ojo</div>
-                  <div class="meta">Paid 3 Feb</div>
-                </div>
-                <div class="stamp paid">✓ Paid</div>
-              </div>
-              <div class="row">
-                <div class="avatar">DO</div>
-                <div class="who">
-                  <div class="name">Daniel Oluwatosin</div>
-                  <div class="meta">Collecting this cycle</div>
-                </div>
-                <div class="stamp next">● Next</div>
-              </div>
-              <div class="row">
-                <div class="avatar">OK</div>
-                <div class="who">
-                  <div class="name">Ogunlade Korede</div>
-                  <div class="meta">Due 9 Feb</div>
-                </div>
-                <div class="stamp pending">○ Pending</div>
-              </div>
-              <div class="row">
-                <div class="avatar">AH</div>
-                <div class="who">
-                  <div class="name">AKINADE HASSAN</div>
-                  <div class="meta">Cycle 3 unpaid</div>
-                </div>
-                <div class="stamp missed">✕ Missed</div>
-              </div>
-              <div class="row">
-                <div class="avatar">OD</div>
-                <div class="who">
-                  <div class="name">Ogunniyi David</div>
-                  <div class="meta">Due 9 Feb</div>
-                </div>
-                <div class="stamp pending">○ Pending</div>
-              </div>
-              <div class="row">
-                <div class="avatar">OR</div>
-                <div class="who">
-                  <div class="name">Ogunniyi Roseline</div>
-                  <div class="meta">Cycle 3 unpaid</div>
-                </div>
-                <div class="stamp pending">○ Pending</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="problem">
-        <div class="container">
-          <h2>What the notebook can't do</h2>
-          <p class="subtext">
-            These are the exact moments coordinators run into every cycle — not
-            hypothetical pain points, the real ones.
-          </p>
-          <div class="problem-grid">
-            <div class="problem-card">
+          <div class="card-grid reveal">
+            <article class="card is-interactive">
+              <span class="card-index">01</span>
               <h3>No proof of payment</h3>
               <p>
-                A member says they paid. The coordinator's notebook says
-                otherwise. There's no shared record to settle it.
+                A member says they paid. The notebook says otherwise. There is
+                no shared record to settle it, so it becomes one person&rsquo;s
+                word against another&rsquo;s.
               </p>
-            </div>
-            <div class="problem-card">
-              <h3>Lost or damaged records</h3>
+            </article>
+            <article class="card is-interactive">
+              <span class="card-index">02</span>
+              <h3>One notebook, one keeper</h3>
               <p>
-                One notebook, one coordinator. If it's misplaced, water-damaged,
-                or the coordinator is unavailable, the group's history goes with
-                it.
+                If it is misplaced, water-damaged, or the coordinator is
+                travelling, the group&rsquo;s entire history goes with it.
               </p>
-            </div>
-            <div class="problem-card">
-              <h3>Unclear missed-payment rules</h3>
+            </article>
+            <article class="card is-interactive">
+              <span class="card-index">03</span>
+              <h3>Unwritten missed-payment rules</h3>
               <p>
-              Members don't know what happens when someone misses a turn, which
-              turns confusion into disputes.
+                Members don&rsquo;t know what happens when someone misses a
+                turn, so confusion turns into a dispute nobody planned for.
               </p>
+            </article>
+          </div>
+
+          <div class="button-row">
+            <a class="text-link" href="problem.html">Read the full problem we researched</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-mint">
+        <div class="wrap solution-grid">
+          <div>
+            <p class="kicker">The solution</p>
+            <h2>One shared record, always current</h2>
+            <p class="lede">
+              AjoFam doesn&rsquo;t change how ajo works. It replaces unreliable
+              memory and scattered records with a single page the whole group
+              can open.
+            </p>
+            <ul class="checklist">
+              <li>See the rotation order and exactly who collects next.</li>
+              <li>Check every member&rsquo;s contribution for the current cycle.</li>
+              <li>Read the missed-payment rules in plain language, agreed by the group.</li>
+              <li>Get a reminder before a contribution is due &mdash; not after it is missed.</li>
+              <li>Look back at any member&rsquo;s full history without asking anyone.</li>
+            </ul>
+            <div class="button-row">
+              <a class="button has-arrow" href="dashboard.html">Look at a live group page</a>
+            </div>
+          </div>
+
+          <article class="ledger-card history-card" aria-labelledby="history-title">
+            <header class="ledger-head">
+              <span class="ledger-title" id="history-title">Oluwakayode Samuel</span>
+              <span class="ledger-amount">Seat 1 of 5</span>
+            </header>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption class="visually-hidden">Contribution history by cycle</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-num">Cycle</th>
+                    <th scope="col">Due</th>
+                    <th scope="col" class="col-status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-num">1</td>
+                    <td>3 February</td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">2</td>
+                    <td>10 February</td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">3</td>
+                    <td>17 February</td>
+                    <td class="col-status"><span class="stamp missed">Missed</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">4</td>
+                    <td>24 February</td>
+                    <td class="col-status"><span class="stamp pending">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="ledger-foot">
+              <span>Cycle 3 carries over to cycle 4</span>
+              <strong>&#8358;10,000 due</strong>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head center">
+            <p class="kicker">What you get</p>
+            <h2>Built around the way your group already runs</h2>
+          </div>
+
+          <div class="card-grid cols-4 reveal">
+            <article class="card is-interactive">
+              <span class="card-index">01</span>
+              <h3>The rotation</h3>
+              <p>A fixed, visible order. Everyone can see their seat and how far off their turn is.</p>
+            </article>
+            <article class="card is-interactive">
+              <span class="card-index">02</span>
+              <h3>The record</h3>
+              <p>Paid, pending, missed &mdash; per member, per cycle, updated the day money moves.</p>
+            </article>
+            <article class="card is-interactive">
+              <span class="card-index">03</span>
+              <h3>The rules</h3>
+              <p>Your group&rsquo;s own missed-payment rules, written once and shown to everybody.</p>
+            </article>
+            <article class="card is-interactive">
+              <span class="card-index">04</span>
+              <h3>The reminders</h3>
+              <p>A nudge before the deadline, so a missed payment is usually just a forgotten one.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-ink">
+        <div class="wrap principles-grid">
+          <div>
+            <p class="kicker">What we stand on</p>
+            <h2>Facts, not fault-finding</h2>
+            <p class="lede">
+              A missed payment is information the group needs, not a public
+              shaming. AjoFam records what happened and what the group agreed
+              happens next &mdash; nothing more.
+            </p>
+          </div>
+          <div class="stat-grid">
+            <div class="stat">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Shared record, instead of five versions of the truth</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">4</span>
+              <span class="stat-label">Words the whole system runs on: paid, pending, missed, next</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">0</span>
+              <span class="stat-label">Bank jargon, hidden fees, or terms nobody asked for</span>
             </div>
           </div>
         </div>
       </section>
-    <section class="solution">
-      <div class="container">
-        <div>
-          <h2>One shared record, always current</h2>
-          <ul>
-            <li>See the rotation order and exactly who collects next.</li>
-            <li>
-              Check every member's contribution status for the current cycle.
-            </li>
-            <li>
-              Understand missed-payment rules in plain language, agreed by the
-              group.
-            </li>
-            <li>
-              Get reminders before a contribution is due — not after it's
-              missed.
-            </li>
-          </ul>
-        </div>
-        <div class="ledger-card">
-          <div class="ledger-head">Contribution History — Oluwakayode Samuel Ojo.</div>
-          <div class="row">
-            <div class="ledger-name">Cycle 1</div>
-            <div class="stamp paid">✓ Paid</div>
-          </div>
-          <div class="row">
-            <div class="ledger-name">Cycle 2</div>
-            <div class="stamp paid">✓ Paid</div>
-          </div>
-          <div class="row">
-            <div class="ledger-name">Cycle 3</div>
-            <div class="stamp missed">✕ Missed</div>
-          </div>
-          <div class="row">
-            <div class="ledger-name">Cycle 4</div>
-            <div class="stamp pending">○ Pending</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-  </main>
-  <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Ajo<span>Fam</span></div>
-        <p>Your contribution. Your turn. Your record.</p>
+      <section class="cta-band">
+        <div class="wrap">
+          <p class="kicker">Ready when your group is</p>
+          <h2>Write it down once. Let everyone see it.</h2>
+          <p>
+            Set your amount, your schedule and your seats. AjoFam keeps the
+            record from the first contribution.
+          </p>
+          <div class="button-row">
+            <a class="button on-ink has-arrow" href="request.html">Start your Ajo group</a>
+            <a class="button ghost on-ink" href="faq.html">Read the guide first</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
+        </div>
       </div>
-      <div>
-        <h4>Contact</h4>
-        <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
-        <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
-      </div>
-      <div>
-        <h4>Navigate</h4>
-        <a href="index.html">Home</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 AjoFam</span>
-      <span>A simple digital home for Ajo groups.</span>
-    </div>
-  </div>
-</footer>
+    </footer>
+
+    <script src="js/site.js" defer></script>
   </body>
 </html>

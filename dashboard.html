@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Main Page &mdash; AjoFam</title>
+    <meta name="description" content="A live AjoFam group page: the rotation order, this week's contributions, and the group's own missed-payment rules — answering who collects next and who has paid at a glance." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="The Main Page &mdash; AjoFam" />
+    <meta property="og:description" content="A live AjoFam group page: the rotation order, this week's contributions, and the group's own missed-payment rules — answering who collects next and who has paid at a glance." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css-style/Brand.css" />
+    <link rel="stylesheet" href="Css-style/dashboard.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item-has-sub is-current">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html" aria-current="page">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
+        </ul>
+
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
+
+    <main id="main">
+      <section class="page-header dashboard-header">
+        <div class="wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>The Main Page</li>
+          </ol>
+          <div class="dash-head-row">
+            <div>
+              <p class="kicker">Ibadan Market Circle &middot; live group page</p>
+              <h1>Iya Alata collects this Friday.</h1>
+              <p class="lede">
+                This is the one page the whole group opens. It answers the four
+                questions that matter, before anyone has to ask them.
+              </p>
+            </div>
+            <div class="dash-actions">
+              <a class="button" href="request.html">Start a page like this</a>
+              <a class="button ghost" href="details.html">Open a member record</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="wrap">
+          <h2 class="visually-hidden">Group at a glance</h2>
+          <div class="stat-grid dash-stats">
+            <div class="stat is-gold">
+              <span class="stat-value">Iya Alata</span>
+              <span class="stat-label">Collecting next &middot; Friday 14 March</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">8 of 10</span>
+              <span class="stat-label">Contributions in for week 6</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Week 6</span>
+              <span class="stat-label">Of a 10-week cycle</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">&#8358;150,000</span>
+              <span class="stat-label">Pot this week, once all ten are in</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="wrap dash-grid">
+          <article class="ledger-card" aria-labelledby="rotation-title">
+            <header class="ledger-head">
+              <span class="ledger-title" id="rotation-title">Rotation order</span>
+              <span class="ledger-amount">10 seats</span>
+            </header>
+            <p class="next-banner">Seat 6 of 10 &mdash; five members still waiting their turn</p>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption class="visually-hidden">
+                  Rotation order, fixed at the start of the cycle
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-num">Seat</th>
+                    <th scope="col">Member</th>
+                    <th scope="col" class="col-status">Turn</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-num">01</td>
+                    <td><span class="cell-name">Mama Ngozi</span><span class="cell-sub">Collected, week 1</span></td>
+                    <td class="col-status"><span class="stamp paid">Collected</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">02</td>
+                    <td><span class="cell-name">Tunde Bakare</span><span class="cell-sub">Collected, week 2</span></td>
+                    <td class="col-status"><span class="stamp paid">Collected</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">03</td>
+                    <td><span class="cell-name">Iya Mulika</span><span class="cell-sub">Collected, week 3</span></td>
+                    <td class="col-status"><span class="stamp paid">Collected</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">04</td>
+                    <td><span class="cell-name">Emeka Obi</span><span class="cell-sub">Collected, week 4</span></td>
+                    <td class="col-status"><span class="stamp paid">Collected</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">05</td>
+                    <td><span class="cell-name">Uche Nwankwo</span><span class="cell-sub">Collected, week 5</span></td>
+                    <td class="col-status"><span class="stamp paid">Collected</span></td>
+                  </tr>
+                  <tr class="is-current">
+                    <td class="col-num">06</td>
+                    <td><span class="cell-name">Iya Alata</span><span class="cell-sub">Collecting now</span></td>
+                    <td class="col-status"><span class="stamp collecting">Collecting</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">07</td>
+                    <td><span class="cell-name">Ibrahim Suleiman</span><span class="cell-sub">Week 7</span></td>
+                    <td class="col-status"><span class="stamp pending">Upcoming</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">08</td>
+                    <td><span class="cell-name">Amaka Chukwu</span><span class="cell-sub">Week 8</span></td>
+                    <td class="col-status"><span class="stamp pending">Upcoming</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">09</td>
+                    <td><span class="cell-name">Segun Adewale</span><span class="cell-sub">Week 9</span></td>
+                    <td class="col-status"><span class="stamp pending">Upcoming</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">10</td>
+                    <td><span class="cell-name">Halima Yusuf</span><span class="cell-sub">Week 10</span></td>
+                    <td class="col-status"><span class="stamp pending">Upcoming</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="ledger-foot">
+              <span>Fixed at the start of the cycle</span>
+              <strong>5 turns remaining</strong>
+            </footer>
+          </article>
+
+          <article class="ledger-card" aria-labelledby="contrib-title">
+            <header class="ledger-head">
+              <span class="ledger-title" id="contrib-title">This week&rsquo;s contributions</span>
+              <span class="ledger-amount">&#8358;15,000 each</span>
+            </header>
+            <p class="next-banner">Due Friday &mdash; everyone pays, including whoever is collecting</p>
+            <div class="table-scroll">
+              <table class="data-table">
+                <caption class="visually-hidden">Week 6 contribution status by member</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Member</th>
+                    <th scope="col" class="col-status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="cell-name">Mama Ngozi</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Tunde Bakare</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Iya Mulika</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Emeka Obi</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Uche Nwankwo</span><span class="cell-sub">Said he will pay Saturday</span></td>
+                    <td class="col-status"><span class="stamp pending">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Iya Alata</span><span class="cell-sub">Pays in the same as everyone, even while collecting</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Ibrahim Suleiman</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Amaka Chukwu</span><span class="cell-sub">Also missed week 5 &mdash; one more moves her seat to the back</span></td>
+                    <td class="col-status"><span class="stamp missed">Missed</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Segun Adewale</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="cell-name">Halima Yusuf</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="ledger-foot">
+              <span>8 paid &middot; 1 pending &middot; 1 missed</span>
+              <strong>&#8358;120,000 in</strong>
+            </footer>
+          </article>
+        </div>
+
+        <div class="wrap">
+          <div class="stamp-legend">
+            <span class="legend-label">What the stamps mean</span>
+            <span class="stamp paid">Paid</span>
+            <span class="stamp pending">Pending</span>
+            <span class="stamp missed">Missed</span>
+            <span class="stamp next">Next to collect</span>
+            <span class="stamp collecting">Collecting</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Question four</p>
+            <h2>What happens if someone misses</h2>
+            <p class="lede">
+              Written once, at the start, and the same for everyone for the
+              length of the cycle. Nobody has to ask, and nobody gets to
+              improvise.
+            </p>
+          </div>
+
+          <ol class="rules-list">
+            <li class="rule">
+              <span class="rule-num">1</span>
+              <div>
+                <h3>&#8358;15,000 every Friday, cash or transfer to the coordinator.</h3>
+                <p>Ten members, ten weeks, one full cycle.</p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">2</span>
+              <div>
+                <h3>The order is fixed.</h3>
+                <p>
+                  It was set before week 1 and does not change on request. Only
+                  the missed-payment rule below can move anyone.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">3</span>
+              <div>
+                <h3>A missed payment doesn&rsquo;t disappear.</h3>
+                <p>
+                  It is added to the following Friday. Miss once and you owe
+                  &#8358;30,000 next time.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">4</span>
+              <div>
+                <h3>Two misses in a row moves your seat to the back.</h3>
+                <p>
+                  You drop to last position and whoever was behind you moves up.
+                  You still owe everything missed &mdash; this changes when you
+                  collect, not what you owe.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">5</span>
+              <div>
+                <h3>Collecting your turn doesn&rsquo;t end your payments.</h3>
+                <p>You keep contributing every week until the cycle finishes.</p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">6</span>
+              <div>
+                <h3>The cycle closes after week 10.</h3>
+                <p>
+                  Once everyone has collected, the group meets to confirm every
+                  account is clear before starting again.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="callout is-gold missed-note">
+            <span class="callout-label">On the missed payment above</span>
+            <p>
+              Amaka Chukwu&rsquo;s week 6 contribution has not come in, and she
+              also missed week 5. Under rule 4, one more miss moves her seat to
+              position 10. This is shown as information, so the group can reach
+              her before that happens &mdash; not as a public callout.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="wrap">
+          <p class="kicker">Your group, on one page</p>
+          <h2>Set it up once, and stop being asked.</h2>
+          <p>
+            Your amount, your schedule, your seats and your rules. AjoFam keeps
+            the record from the first contribution onward.
+          </p>
+          <div class="button-row">
+            <a class="button on-ink has-arrow" href="request.html">Start your Ajo group</a>
+            <a class="button ghost on-ink" href="trust.html">How a payment becomes a record</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/site.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AjoFam">
+  <title>AjoFam — the Ajo Loop</title>
+  <circle cx="32" cy="32" r="30" fill="#176B4D"/>
+  <path d="M46 32a14 14 0 1 1-5.6-11.2" fill="none" stroke="#F8F6EF" stroke-width="4.6" stroke-linecap="round"/>
+  <path d="M46.6 19.2v7.2h-7.2" fill="none" stroke="#D5A83A" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="4.6" fill="#D5A83A"/>
+</svg>

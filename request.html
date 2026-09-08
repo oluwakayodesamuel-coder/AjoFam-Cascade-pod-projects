@@ -1,252 +1,457 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AjoFam— Built around trust and contributions</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Css-style/Brand.css">
-<link rel="stylesheet" href="Css-style/request.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start Your Ajo Group &mdash; AjoFam</title>
+    <meta name="description" content="Set up your ajo group on AjoFam: choose your contribution amount, schedule and seats, and get a shared page your members can see from the first payment." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="Start Your Ajo Group &mdash; AjoFam" />
+    <meta property="og:description" content="Set up your ajo group on AjoFam: choose your contribution amount, schedule and seats, and get a shared page your members can see from the first payment." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css-style/Brand.css" />
+    <link rel="stylesheet" href="Css-style/request.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="index.html">
-      <img
-        src="image/Ajo-fam-logo.png"
-        alt="AjoFam logo"
-        width="150"
-        height="120"
-      />
-      <span class="brand-word">Ajo<span>Fam</span></span>
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <ul class="nav-links">
-      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-      <li><a href="problem.html">The Problem</a></li>
-      <li><a href="how-it-works.html">How It Works</a></li>
-      <li><a href="dashboard.html">The Main Page</a></li>
-      <li><a href="details.html">The Details</a></li>
-      <li><a href="trust.html">Trust &amp; Verification</a></li>
-      <li><a href="request.html">Get Started</a></li>
-      <li><a href="faq.html">Guide &amp; FAQ</a></li>
-      <li><a href="pod.html">The Pod</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="button small" href="request.html">Start your Ajo group</a>
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-      ☰
-    </label>
-  </div>
-</header>
-  
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
+        </a>
 
+        <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item-has-sub">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
+        </ul>
 
-<main>
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
 
-  <!-- INTRO -->
-  <section class="wrap group-strip">
-    <p class="eyebrow-plain">Let's get you set up</p>
-    <h1 class="group-name">Start your Ajo group</h1>
-    <p class="group-meta">Set your contribution amount, choose how often you collect, and bring your members in — AjoFam keeps the record from day one, so there's no arguing with the book.</p>
-  </section>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-  <!-- WHAT YOU'LL NEED -->
-  <section class="wrap" aria-labelledby="next-up-heading">
-    <div class="next-card">
-      <div class="next-card-top">
-        <span class="next-tag">Before you start</span>
-        <span class="next-date">Takes about 3 minutes</span>
-      </div>
-      <h2 id="next-up-heading" class="next-name">Here's what you'll need to set up your group</h2>
-      <div class="next-figures">
-        <div class="fig">
-          <span class="fig-value">Group name</span>
-          <span class="fig-label">what your members will recognise it as</span>
+    <main id="main">
+      <section class="page-header">
+        <div class="wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Get Started</li>
+          </ol>
+          <p class="kicker">Get started &middot; about three minutes</p>
+          <h1>Start your Ajo group.</h1>
+          <p class="lede">
+            Set your contribution, choose how often you collect, and bring your
+            members in. AjoFam keeps the record from the first payment, so
+            there is never an argument with the book.
+          </p>
         </div>
-        <div class="fig">
-          <span class="fig-value">Amount &amp; schedule</span>
-          <span class="fig-label">how much, how often, and when it starts</span>
-        </div>
-        <div class="fig">
-          <span class="fig-value">Your members</span>
-          <span class="fig-label">how many seats — add them once the group exists</span>
-        </div>
-      </div>
-      <p class="next-note">Once you submit, AjoFam creates the group's page. The rotation, the ledger, and the contribution record all update from there as your members join and pay.</p>
-    </div>
-  </section>
+      </section>
 
-  <!-- HOW IT WILL RUN -->
-  <section class="wrap section" id="rules" aria-labelledby="rules-heading">
-    <div class="section-head">
-      <h2 id="rules-heading">How your group will run</h2>
-      <p class="section-sub">These are the default AjoFam rules every group runs on, so members know what to expect before the first contribution is made.</p>
-    </div>
-
-    <div class="rules-list">
-      <div class="rule">
-        <span class="rule-num">1</span>
-        <div class="rule-body">
-          <h3>Everyone pays the agreed amount, on the agreed schedule, in the rotation order.</h3>
-          <p>The amount and the order stay fixed once the group starts, whether or not it's a member's turn to collect. Everyone keeps paying until every seat has collected once.</p>
+      <section class="section-tight">
+        <div class="wrap">
+          <div class="ready-card">
+            <div class="ready-head">
+              <span class="ready-tag">Before you begin</span>
+              <span class="ready-time">Have these three things ready</span>
+            </div>
+            <div class="ready-figures">
+              <div class="ready-fig">
+                <span class="ready-value">A group name</span>
+                <span class="ready-label">Whatever your members already call it</span>
+              </div>
+              <div class="ready-fig">
+                <span class="ready-value">Amount &amp; schedule</span>
+                <span class="ready-label">How much, how often, and when it starts</span>
+              </div>
+              <div class="ready-fig">
+                <span class="ready-value">Number of seats</span>
+                <span class="ready-label">You can add the members themselves afterwards</span>
+              </div>
+            </div>
+            <p class="ready-note">
+              When you submit, AjoFam creates your group&rsquo;s page. The
+              rotation, the record and the rules all live there, and update as
+              your members join and pay.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="rule">
-        <span class="rule-num">2</span>
-        <div class="rule-body">
-          <h3>The pot goes to whoever's seat it is, once everyone has paid.</h3>
-          <p>You confirm every payment before the pot is handed over. If even one person hasn't paid, the collector waits — the pot doesn't go out short.</p>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The default rules</p>
+            <h2>How your group will run</h2>
+            <p class="lede">
+              Every AjoFam group starts on these five rules, so members know
+              what to expect before the first contribution. Your group can agree
+              its own variations once the page exists.
+            </p>
+          </div>
+
+          <ol class="rules-list">
+            <li class="rule">
+              <span class="rule-num">1</span>
+              <div>
+                <h3>Everyone pays the agreed amount, on the agreed schedule, in the agreed order.</h3>
+                <p>
+                  The amount and the order stay fixed once the group starts
+                  &mdash; whether or not it is a member&rsquo;s turn to collect.
+                  Everyone keeps paying until every seat has collected once.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">2</span>
+              <div>
+                <h3>The pot goes to whoever&rsquo;s seat it is, once everyone has paid.</h3>
+                <p>
+                  You confirm every contribution before the pot is handed over.
+                  If one person has not paid, the collector waits &mdash; the
+                  pot does not go out short.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">3</span>
+              <div>
+                <h3>A missed payment carries over to the next round.</h3>
+                <p>
+                  If a member does not pay by the deadline it does not disappear.
+                  It is added to what they owe the following round, and they keep
+                  their seat.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">4</span>
+              <div>
+                <h3>Miss two rounds in a row and the seat moves to the back.</h3>
+                <p>
+                  Their turn moves behind whoever was last in line. They still
+                  owe everything missed &mdash; this changes when they collect,
+                  not what they owe.
+                </p>
+              </div>
+            </li>
+            <li class="rule">
+              <span class="rule-num">5</span>
+              <div>
+                <h3>Once a seat has collected, it cannot collect again this round.</h3>
+                <p>
+                  Every seat gets exactly one payout per round. When all seats
+                  have collected, the group either repeats the same order or
+                  agrees a new one &mdash; by discussion, not by memory.
+                </p>
+              </div>
+            </li>
+          </ol>
         </div>
-      </div>
-      <div class="rule">
-        <span class="rule-num">3</span>
-        <div class="rule-body">
-          <h3>Missing a payment carries over to the next round.</h3>
-          <p>If a member doesn't pay by the deadline, it doesn't disappear — it's added to what they owe the following round, on top of staying in their seat.</p>
+      </section>
+
+      <section class="section section-mint" id="create">
+        <div class="wrap create-grid">
+          <div class="create-intro">
+            <p class="kicker">Create your group</p>
+            <h2>Tell us how your ajo runs</h2>
+            <p class="lede">
+              Nothing here is locked in. You can change the details and invite
+              your members once the page is created.
+            </p>
+            <ul class="checklist create-assurances">
+              <li>AjoFam never holds or moves your contributions.</li>
+              <li>No fee is taken from the pot.</li>
+              <li>Your record is visible to your group only.</li>
+            </ul>
+            <p class="create-help">
+              Would rather talk it through first?
+              <a href="contact.html">Reach the team</a>.
+            </p>
+          </div>
+
+          <form class="form-card" data-demo-form novalidate>
+            <h3 class="form-title">Group set-up</h3>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="group-name">Group name</label>
+                <input
+                  type="text"
+                  id="group-name"
+                  name="group-name"
+                  placeholder="e.g. Iwo Road Traders"
+                  autocomplete="organization"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="coordinator">
+                  Your name <span class="optional">(coordinator)</span>
+                </label>
+                <input
+                  type="text"
+                  id="coordinator"
+                  name="coordinator"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="0813 480 6343"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="field-hint">Used for reminders and nothing else.</span>
+              </div>
+
+              <div class="field">
+                <label for="seats">Number of seats</label>
+                <select id="seats" name="seats" required>
+                  <option value="" disabled selected>Choose how many members</option>
+                  <option>5</option>
+                  <option>8</option>
+                  <option>10</option>
+                  <option>12</option>
+                  <option>15</option>
+                  <option>20</option>
+                  <option>More than 20</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="amount">Contribution amount</label>
+                <div class="amount-input">
+                  <span class="amount-prefix" aria-hidden="true">&#8358;</span>
+                  <input
+                    type="text"
+                    id="amount"
+                    name="amount"
+                    placeholder="5,000"
+                    inputmode="numeric"
+                    required
+                  />
+                </div>
+                <span class="field-hint">The fixed amount every member pays each round.</span>
+              </div>
+
+              <div class="field">
+                <label for="start-date">First contribution date</label>
+                <input type="date" id="start-date" name="start-date" required />
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>How often do you collect?</legend>
+              <div class="choice-row">
+                <label class="choice">
+                  <input type="radio" name="frequency" value="weekly" checked />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Every week</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="frequency" value="biweekly" />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Every two weeks</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="frequency" value="monthly" />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Every month</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend>
+                Payment methods you will accept
+                <span class="optional">(choose any)</span>
+              </legend>
+              <div class="choice-row">
+                <label class="choice">
+                  <input type="checkbox" name="methods" value="cash" checked />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Cash to the coordinator</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" name="methods" value="transfer" />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Bank transfer</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" name="methods" value="mobile" />
+                  <span class="dot" aria-hidden="true"></span>
+                  <span>Mobile money</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="note">
+                Anything else your group should know
+                <span class="optional">(optional)</span>
+              </label>
+              <textarea
+                id="note"
+                name="note"
+                placeholder="e.g. where the group meets, or a house rule you want written down"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="button block has-arrow">Create my Ajo group</button>
+
+            <p class="form-status" role="status">
+              Thank you. Your group details have been received &mdash; this is a
+              prototype, so nothing has been sent yet. In the finished product
+              this creates your group&rsquo;s page and returns a link to share
+              with your members.
+            </p>
+
+            <p class="form-footnote">
+              This creates your group&rsquo;s page with the rotation, record and
+              rules ready to go. You will get a link to share so your members
+              can see it and take their seats.
+            </p>
+          </form>
         </div>
-      </div>
-      <div class="rule">
-        <span class="rule-num">4</span>
-        <div class="rule-body">
-          <h3>Miss two rounds in a row and the seat moves to the back.</h3>
-          <p>The member's turn to collect moves behind whoever was last in line. They still owe everything missed — this changes when they collect, not what's owed.</p>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head center">
+            <p class="kicker">After you submit</p>
+            <h2>What happens next</h2>
+          </div>
+          <div class="steps cols-3 reveal">
+            <article class="step">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Your page is created</h3>
+                <p>With your amount, schedule and seats already filled in.</p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <div>
+                <h3>You invite your members</h3>
+                <p>Share one link. Each member takes a seat in the rotation.</p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <div>
+                <h3>The first cycle begins</h3>
+                <p>You mark contributions as they come in. Everyone else just reads.</p>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-      <div class="rule">
-        <span class="rule-num">5</span>
-        <div class="rule-body">
-          <h3>Once a seat has collected, it can't collect again this round.</h3>
-          <p>Every seat gets exactly one payout per round. Once every seat has collected, the group either starts a new round in the same order or agrees a new one — by discussion, not by memory.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <!-- CREATE GROUP FLOW -->
-  <section class="wrap section" id="create" aria-labelledby="create-heading">
-    <div class="section-head">
-      <h2 id="create-heading">Create your Ajo group</h2>
-      <p class="section-sub">Fill in the details below to set your group up. You can invite members and share the group's page right after.</p>
-    </div>
-
-    <form class="pay-form" action="#" onsubmit="return false;">
-
-      <div class="form-grid">
-        <div class="field">
-          <label for="group-name">Group name</label>
-          <input type="text" id="group-name" name="group-name" placeholder="e.g. Iwo Road Traders' Ajo" required>
-        </div>
-
-        <div class="field">
-          <label for="coordinator">Your name <span class="optional">(coordinator)</span></label>
-          <input type="text" id="coordinator" name="coordinator" placeholder="Your full name" required>
-        </div>
-
-        <div class="field">
-          <label for="members">Number of members</label>
-          <select id="members" name="members" required>
-            <option value="" disabled selected>Select number of seats</option>
-            <option>5</option>
-            <option>8</option>
-            <option>10</option>
-            <option>12</option>
-            <option>15</option>
-            <option>20</option>
-            <option>Custom</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="start-date">Start date</label>
-          <input type="date" id="start-date" name="start-date" required>
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="amount">Contribution amount</label>
-        <div class="amount-input">
-          <span class="amount-prefix">₦</span>
-          <input type="text" id="amount" name="amount" placeholder="5,000" inputmode="numeric" required>
-        </div>
-        <span class="field-hint">The fixed amount every member pays, per round.</span>
-      </div>
-
-      <fieldset class="field method-field">
-        <legend>How often do you collect</legend>
-        <div class="radio-row">
-          <label class="radio-pill">
-            <input type="radio" name="frequency" value="weekly" checked>
-            <span>Every week</span>
-          </label>
-          <label class="radio-pill">
-            <input type="radio" name="frequency" value="biweekly">
-            <span>Every 2 weeks</span>
-          </label>
-          <label class="radio-pill">
-            <input type="radio" name="frequency" value="monthly">
-            <span>Every month</span>
-          </label>
-        </div>
-      </fieldset>
-
-      <fieldset class="field method-field">
-        <legend>Payment methods you'll accept <span class="optional">(select all that apply)</span></legend>
-        <div class="radio-row">
-          <label class="radio-pill">
-            <input type="checkbox" name="methods" value="cash" checked>
-            <span>Cash to the coordinator</span>
-          </label>
-          <label class="radio-pill">
-            <input type="checkbox" name="methods" value="transfer">
-            <span>Bank transfer</span>
-          </label>
-          <label class="radio-pill">
-            <input type="checkbox" name="methods" value="mobile">
-            <span>Mobile money</span>
-          </label>
-        </div>
-      </fieldset>
-
-      <div class="field">
-        <label for="note">Anything else your group should know <span class="optional">(optional)</span></label>
-        <input type="text" id="note" name="note" placeholder="e.g. where the group meets, or any house rules">
-      </div>
-
-      <button type="submit" class="submit-btn">Create my Ajo group</button>
-      <p class="form-footnote">This creates your group's page with the rotation, ledger, and record ready to go. You'll get a link to share with your members so they can see it and join their seats.</p>
-    </form>
-  </section>
-
-</main>
     <footer class="site-footer">
       <div class="wrap">
         <div class="footer-grid">
-          <div>
-            <div class="footer-brand">Ajo<span>Fam</span></div>
-            <p>Your contribution. Your turn. Your record.</p>
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
           </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
-            <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
           </div>
-          <div>
-            <h4>Navigate</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="contact.html">Contact</a>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <span>&copy; 2026 AjoFam</span>
-          <span>A simple digital home for Ajo groups.</span>
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
         </div>
       </div>
     </footer>
 
-</body>
+    <script src="js/site.js" defer></script>
+  </body>
 </html>

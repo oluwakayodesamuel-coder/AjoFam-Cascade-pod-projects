@@ -1,390 +1,82 @@
+/* AjoFam — The Details (member record) */
 
-
-:root {
-  --ink: #18221d;
-  --ink-soft: #176b4d;
-  --green: #176b4d;
-  --green-deep: #0f4e38;
-  --gold: #d5a83a;
-  --gold-soft: #ead9b3;
-  --paper: #f8f6ef;
-  --mint: #dcefe5;
-  --red: #a3492a;
-  --red-soft: #f0dcd1;
-  --line: rgba(24, 34, 29, 0.14);
+.member-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  align-items: start;
 }
-
-/* ===== Layout shell ===== */
-.wrap {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 32px;
-  
+.member-avatar {
+  width: clamp(56px, 8vw, 72px);
+  height: clamp(56px, 8vw, 72px);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  background: var(--gold-soft);
+  color: var(--gold-deep);
 }
+.member-head h1 { margin-bottom: 0.6rem; }
 
-/* ===== Hero / overview banner ===== */
-section.hero {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
-  color: var(--paper);
-}
-
-.hero-tag {
-  display: inline-block;
-  margin-bottom: 18px;
-  padding: 7px 14px;
-  border: 1px solid rgba(248, 246, 239, 0.35);
-  border-radius: 20px;
-  background: rgba(248, 246, 239, 0.1);
-  color: var(--gold);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-h1.headline {
-  max-width: 720px;
-  color: var(--paper);
-  font-size: 3rem;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-}
-
-p.subhead {
-  max-width: 560px;
-  margin-top: 16px;
-  color: rgba(248, 246, 239, 0.82);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-p.subhead strong {
-  color: var(--paper);
-  font-weight: 700;
-}
-
-/* Metrics card sitting inside the dark hero */
-.hero .ledger-card {
-  background: rgba(248, 246, 239, 0.06);
-  border: 1px solid rgba(248, 246, 239, 0.18);
-  box-shadow: none;
-}
-
-.ledger-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px 24px;
-  background: rgba(248, 246, 239, 0.08);
-  border-bottom: 1px solid rgba(248, 246, 239, 0.16);
-}
-
-.ledger-head .cycle {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--paper);
-}
-
-.ledger-head .amount {
-  font-size: 0.88rem;
-  color: var(--gold);
+.detail-table { min-width: 640px; }
+.detail-table .cell-amount {
+  font-variant-numeric: tabular-nums;
   font-weight: 600;
+  color: var(--ink-strong);
+  white-space: nowrap;
 }
+.detail-table .cell-note { margin-top: 0; font-size: 0.85rem; }
 
-.next-banner {
-  padding: 14px 24px;
-  background: rgba(213, 168, 58, 0.16);
-  color: var(--paper);
-  font-size: 0.92rem;
-}
-
-.next-banner strong {
-  color: var(--gold);
-}
-
-/* ===== Main content grid ===== */
-.hero-grid {
+.detail-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 56px;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: start;
 }
+.detail-grid .callout { margin-bottom: 0.85rem; }
+.detail-grid .callout:last-child { margin-bottom: 0; }
 
-/* Section headings used above each column */
-main h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-/* ===== Circle parameter cards (left column) ===== */
-.problem-card {
-  background: #ffffff;
+.detail-side {
+  background: var(--surface-raised);
   border: 1px solid var(--line);
-  border-left: 4px solid var(--green);
-  border-radius: 10px;
-  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.35rem, 2.5vw, 1.85rem);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--nav-h) + 20px);
 }
-
-.problem-card h3 {
-  margin: 0 0 8px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.problem-card p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* ===== Member audit roll (right column) ===== */
-.hero-grid .ledger-card {
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(24, 34, 29, 0.06);
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 44px 1fr auto;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
+.detail-side h3 {
+  font-size: var(--step-1);
+  padding-bottom: 0.85rem;
   border-bottom: 1px solid var(--line);
 }
 
-.row:last-child {
-  border-bottom: none;
+.spec-list { margin: 0; }
+.spec-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
 }
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--mint);
-  color: var(--green-deep);
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 0.82rem;
-}
-
-.who .name {
-  font-weight: 600;
-  font-size: 0.96rem;
-  color: var(--ink);
-}
-
-.who .meta {
-  margin-top: 2px;
+.spec-list > div:last-child { border-bottom: 0; }
+.spec-list dt {
   font-size: 0.8rem;
-  color: var(--ink-soft);
-}
-
-/* ===== Status stamps ===== */
-.stamp {
-  display: inline-block;
-  padding: 6px 13px;
-  border-radius: 20px;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
-  white-space: nowrap;
+  color: var(--ink-faint);
+}
+.spec-list dd {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-strong);
 }
 
-.stamp.paid {
-  background: var(--mint);
-  color: var(--green-deep);
-}
-
-.stamp.next {
-  background: var(--gold);
-  color: var(--ink);
-}
-
-.stamp.pending {
-  background: var(--gold-soft);
-  color: var(--ink-soft);
-}
-
-.stamp.missed {
-  background: var(--red-soft);
-  color: var(--red);
-}
-
-/* ===== Verify / action footer section ===== */
-section.problem {
-  background: var(--mint);
-}
-
-.container {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-section.problem h2 {
-  font-size: 1.8rem;
-}
-
-.subtext {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.6;
-}
-
-.hero-ctas {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-
-@media (min-width: 1400px) {
-
-  h1.headline {
-    font-size: 3.4rem;
-  }
-  .hero-grid {
-    gap: 64px;
-  }
-}
-
-@media (max-width: 1024px) {
- 
-  main h2 {
-    font-size: 1.3rem;
-  }
-  .problem-card {
-    padding: 18px 20px;
-  }
-  .row {
-    padding: 14px 16px;
-    gap: 14px;
-  }
-}
+.correction-block { text-align: center; }
+.correction-block .kicker { justify-content: center; }
+.correction-block h2 { margin-inline: auto; max-width: 20ch; }
+.correction-block .lede { margin-inline: auto; }
+.correction-block .button-row { justify-content: center; }
 
 @media (max-width: 900px) {
-
-  .hero-tag {
-    margin-bottom: 14px;
-  }
-  .hero .ledger-card {
-    margin-top: 8px;
-  }
-  .ledger-head {
-    padding: 16px 18px;
-  }
-  .container {
-    padding: 0 24px;
-  }
-}
-
-@media (max-width: 640px) {
-  
-  .hero-tag {
-    font-size: 0.72rem;
-    padding: 6px 12px;
-  }
-  .problem-card {
-    padding: 16px 18px;
-    border-left-width: 3px;
-  }
-  .who .name {
-    font-size: 0.92rem;
-  }
-  .who .meta {
-    font-size: 0.76rem;
-  }
-  .stamp {
-    font-size: 0.68rem;
-    padding: 5px 11px;
-  }
-  section.problem h2 {
-    font-size: 1.5rem;
-  }
-  .subtext {
-    font-size: 0.96rem;
-  }
-  .container {
-    padding: 0 20px;
-  }
-  .hero-ctas .button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 420px) {
-  .hero-tag {
-    font-size: 0.68rem;
-    padding: 5px 10px;
-    margin-bottom: 12px;
-  }
-  p.subhead {
-    font-size: 0.95rem;
-  }
-  .ledger-head .cycle {
-    font-size: 0.92rem;
-  }
-  .ledger-head .amount {
-    font-size: 0.8rem;
-  }
-  .next-banner {
-    font-size: 0.8rem;
-  }
-  .problem-card {
-    padding: 14px 16px;
-  }
-  .problem-card h3 {
-    font-size: 0.98rem;
-  }
-  .problem-card p {
-    font-size: 0.88rem;
-  }
-  .who .name {
-    font-size: 0.88rem;
-  }
-  .who .meta {
-    font-size: 0.72rem;
-  }
-  .stamp {
-    font-size: 0.64rem;
-    padding: 4px 9px;
-  }
-  section.problem h2 {
-    font-size: 1.3rem;
-  }
-  .container {
-    padding: 0 16px;
-  }
-  .hero-ctas {
-    gap: 10px;
-  }
-}
-
-@media (max-height: 480px) and (orientation: landscape) {
-  .hero-tag {
-    margin-bottom: 10px;
-  }
-  h1.headline {
-    font-size: 1.8rem;
-  }
-  p.subhead {
-    font-size: 0.95rem;
-    margin-top: 8px;
-  }
-  .hero .ledger-card {
-    margin-top: 16px;
-  }
+  .detail-grid { grid-template-columns: 1fr; }
+  .detail-side { position: static; }
 }

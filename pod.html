@@ -1,9 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AjoFam — Everyone knows where they stand</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Pod &mdash; AjoFam</title>
+    <meta name="description" content="Pod Cascade: the nine people who designed and built AjoFam, the brand pillars they worked to, and the colour, type and status language the whole site is held against." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="The Pod &mdash; AjoFam" />
+    <meta property="og:description" content="Pod Cascade: the nine people who designed and built AjoFam, the brand pillars they worked to, and the colour, type and status language the whole site is held against." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,181 +24,317 @@
     <link rel="stylesheet" href="Css-style/pod.css" />
   </head>
   <body>
-    <header class="nav">
-      <div class="nav-inner">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
         <a class="brand" href="index.html">
-          <img
-            src="image/Ajo-fam-logo.png"
-            alt="AjoFam logo"
-            width="150"
-            height="120"
-          />
-          <span class="brand-word">Ajo<span>Fam</span></span>
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="problem.html">The Problem</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="dashboard.html">The Main Page</a></li>
-          <li><a href="details.html">The Details</a></li>
-          <li><a href="trust.html">Trust &amp; Verification</a></li>
-          <li><a href="request.html">Get Started</a></li>
-          <li><a href="faq.html">Guide &amp; FAQ</a></li>
-          <li>
-            <a href="pod.html" class="active" aria-current="page">The Pod</a>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
+
+        <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item-has-sub">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html" aria-current="page">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
         </ul>
-        <a class="button small" href="request.html">Start your Ajo group</a>
-        <label
-          for="nav-toggle"
-          class="nav-toggle-label"
-          aria-label="Toggle navigation menu"
+
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
         >
-          ☰
-        </label>
-      </div>
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
     </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <main id="top">
-      <!-- RECORD: the product's real artifact, shown first -->
-      <section class="record-section wrap" aria-labelledby="record-heading">
-        <div class="record-intro">
-          <h1 id="record-heading">Everyone knows where they stand.</h1>
-          <p>
-            AjoFam turns your group's notebook, spreadsheet, and WhatsApp
-            messages into one shared record — the rotation, the payments,
-            and the rules, all in one place.
+    <main id="main">
+      <section class="page-header">
+        <div class="wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>The Pod</li>
+          </ol>
+          <p class="kicker">Pod Cascade</p>
+          <h1>Nine people, one shared record.</h1>
+          <p class="lede">
+            AjoFam was designed and built by Pod Cascade. Each member owns a
+            page and a discipline &mdash; which is the same idea as the product:
+            everyone knows where they stand.
           </p>
-          <div class="record-actions">
-            <a class="button" href="request.html">Start your Ajo group</a>
-            <a class="button ghost" href="how-it-works.html">See how it works</a>
-          </div>
         </div>
+      </section>
 
-        <div class="ledger">
-          <div class="ledger-heading">
-            <h2>Umuada Traders Group</h2>
-            <span class="cycle-label">Cycle 5 of 12</span>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The brand idea</p>
+            <h2>Everyone knows where they stand.</h2>
+            <p class="lede">
+              The name joins <strong>Ajo</strong> and <strong>Fam</strong>
+              &mdash; a trusted financial family. Everything we designed had to
+              serve one of five pillars, or it did not go in.
+            </p>
           </div>
-          <table class="ledger-table">
-            <thead>
-              <tr>
-                <th scope="col" class="col-turn">Turn</th>
-                <th scope="col">Member</th>
-                <th scope="col" class="col-status">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="col-turn">1</td>
-                <td class="col-member">Ngozi</td>
-                <td class="col-status"><span class="stamp paid">✓ Paid</span></td>
-              </tr>
-              <tr>
-                <td class="col-turn">2</td>
-                <td class="col-member">Chidi</td>
-                <td class="col-status"><span class="stamp paid">✓ Paid</span></td>
-              </tr>
-              <tr>
-                <td class="col-turn">3</td>
-                <td class="col-member">Amaka</td>
-                <td class="col-status"><span class="stamp next">★ Next to collect</span></td>
-              </tr>
-              <tr>
-                <td class="col-turn">4</td>
-                <td class="col-member">Tunde</td>
-                <td class="col-status"><span class="stamp pending">● Pending</span></td>
-              </tr>
-              <tr>
-                <td class="col-turn">5</td>
-                <td class="col-member">Ifeoma</td>
-                <td class="col-status"><span class="stamp missed">✕ Missed</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="ledger-legend">
-            <span class="stamp paid">✓ Paid</span>
-            <span class="stamp pending">● Pending</span>
-            <span class="stamp missed">✕ Missed</span>
-            <span class="stamp next">★ Next to collect</span>
+
+          <div class="card-grid cols-4 reveal">
+            <article class="card">
+              <span class="card-index">01</span>
+              <h3>Clarity</h3>
+              <p>The most important information is visible without searching for it.</p>
+            </article>
+            <article class="card">
+              <span class="card-index">02</span>
+              <h3>Trust</h3>
+              <p>Clear records support the trust that already exists between people.</p>
+            </article>
+            <article class="card">
+              <span class="card-index">03</span>
+              <h3>Community</h3>
+              <p>Ajo is people helping people. The product should sound like a member, not a bank.</p>
+            </article>
+            <article class="card">
+              <span class="card-index">04</span>
+              <h3>Accountability</h3>
+              <p>Facts, without public shaming. A missed payment is information, not a verdict.</p>
+            </article>
+            <article class="card">
+              <span class="card-index">05</span>
+              <h3>Simplicity</h3>
+              <p>If someone understands the notebook, they understand AjoFam.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- HOW IT WORKS: the rotation, made visible -->
-      <section class="loop-section" id="how-it-works" aria-labelledby="loop-heading">
-        <div class="wrap loop-grid">
-          <div class="loop-copy">
-            <h2 id="loop-heading">The loop, made visible</h2>
-            <p>
-              Ajo runs in a loop — contribute, wait your turn, collect, then
-              start again. AjoFam shows exactly where your group is in that
-              loop, so nobody has to ask.
+      <section class="section section-mint">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The pod</p>
+            <h2>Who built what</h2>
+            <p class="lede">
+              Every page has one owner and one discipline they hold across the
+              whole site.
             </p>
           </div>
-          <div class="loop-diagram">
-            <svg viewBox="0 0 340 340" role="img" aria-labelledby="loop-svg-title">
-              <title id="loop-svg-title">The Ajo loop: contribute, wait, collect, repeat</title>
-              <circle cx="170" cy="170" r="118" fill="none" stroke="#DCEFE5" stroke-width="14"/>
-              <circle cx="170" cy="170" r="118" fill="none" stroke="#176B4D" stroke-width="14"
-                      stroke-dasharray="60 20 60 20 60 20 60 20" stroke-linecap="round"/>
-              <g class="loop-arrowhead">
-                <path d="M275 100 L292 108 L280 122 Z" fill="#176B4D"/>
-              </g>
-              <g font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#18221D">
-                <text x="170" y="34" text-anchor="middle">Contribute</text>
-                <text x="306" y="176" text-anchor="middle">Wait</text>
-                <text x="170" y="322" text-anchor="middle">Collect</text>
-                <text x="40" y="176" text-anchor="middle">Repeat</text>
-              </g>
-            </svg>
+
+          <div class="team-grid reveal">
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OS</span>
+                <div>
+                  <h3>Oluwakayode Samuel Ojo</h3>
+                  <p class="member-role">Brand keeper</p>
+                </div>
+              </div>
+              <p class="member-blurb">Holds the brand idea steady and makes sure the front door says what AjoFam actually is.</p>
+              <a class="text-link member-link" href="index.html">Landing Page</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OJ</span>
+                <div>
+                  <h3>Omolafe Joshua</h3>
+                  <p class="member-role">Research keeper</p>
+                </div>
+              </div>
+              <p class="member-blurb">Gathered how real ajo groups track contributions today, and where that breaks down.</p>
+              <a class="text-link member-link" href="problem.html">The Problem</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">AH</span>
+                <div>
+                  <h3>Akinade Hassan</h3>
+                  <p class="member-role">Brand sheet owner</p>
+                </div>
+              </div>
+              <p class="member-blurb">Owns the brand sheet &mdash; colour, type, voice &mdash; and the explanation of the loop.</p>
+              <a class="text-link member-link" href="how-it-works.html">How It Works</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OR</span>
+                <div>
+                  <h3>Ogunniyi Roseline</h3>
+                  <p class="member-role">Consistency check</p>
+                </div>
+              </div>
+              <p class="member-blurb">Checks that a member record reads the same way on every page it appears.</p>
+              <a class="text-link member-link" href="details.html">The Details</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OD</span>
+                <div>
+                  <h3>Ogunniyi David</h3>
+                  <p class="member-role">Accessibility check</p>
+                </div>
+              </div>
+              <p class="member-blurb">Tests contrast, keyboard access and screen-reader order, and owns the trust story.</p>
+              <a class="text-link member-link" href="trust.html">Trust &amp; Verification</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OF</span>
+                <div>
+                  <h3>Ogunwale Felix</h3>
+                  <p class="member-role">Forms and flows</p>
+                </div>
+              </div>
+              <p class="member-blurb">Designs the set-up flow so a coordinator can create a group in one sitting.</p>
+              <a class="text-link member-link" href="request.html">Get Started</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">EM</span>
+                <div>
+                  <h3>Edward Wisdom Michael</h3>
+                  <p class="member-role">Copy and tone</p>
+                </div>
+              </div>
+              <p class="member-blurb">Keeps the writing plain and non-judgemental, in words groups already use.</p>
+              <a class="text-link member-link" href="faq.html">Guide &amp; FAQ</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OA</span>
+                <div>
+                  <h3>Oluwatosin Amos Odesola</h3>
+                  <p class="member-role">README owner</p>
+                </div>
+              </div>
+              <p class="member-blurb">Documents what the pod built and why, so anyone can pick the project up.</p>
+              <a class="text-link member-link" href="pod.html">The Pod</a>
+            </article>
+            <article class="member-card">
+              <div class="member-top">
+                <span class="avatar" aria-hidden="true">OK</span>
+                <div>
+                  <h3>Ogunlade Korede</h3>
+                  <p class="member-role">Navigation and deploy</p>
+                </div>
+              </div>
+              <p class="member-blurb">Owns the header, footer and navigation, and gets the site live.</p>
+              <a class="text-link member-link" href="contact.html">Contact &amp; Site Shell</a>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- ACCOUNTABILITY: facts, not shame -->
-      <section class="accountability-section" id="accountability" aria-labelledby="accountability-heading">
-        <div class="wrap accountability-inner">
-          <div class="accountability-copy">
-            <h2 id="accountability-heading">Missed payments, without the shame</h2>
-            <p>
-              When someone misses a contribution, AjoFam records it as a
-              fact — not a public callout. Everyone can see what was due,
-              what the group agreed happens next, and what's needed to catch
-              up.
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The brand sheet</p>
+            <h2>What we designed to</h2>
+            <p class="lede">
+              These are the decisions the whole site is held against. If a page
+              breaks one of them, the page is wrong &mdash; not the sheet.
             </p>
           </div>
-          <div class="note-card">
-            <div class="note-status">✕ Missed — Cycle 5</div>
-            <p><strong>Ifeoma</strong> · ₦15,000 contribution</p>
-            <p>Due 28 August, not yet received.</p>
-            <div class="rule-line">
-              Group rule: contribution due within 3 days, or the turn passes
-              to the next member.
+
+          <div class="brand-grid">
+            <div class="brand-block">
+              <h3>Colour</h3>
+              <ul class="swatches">
+                <li><span class="swatch" style="background:#176B4D"></span>
+                  <span><strong>Ajo Green</strong> #176B4D<em>Primary. Buttons, links, the loop.</em></span></li>
+                <li><span class="swatch" style="background:#18221D"></span>
+                  <span><strong>Deep Charcoal</strong> #18221D<em>Text and interface.</em></span></li>
+                <li><span class="swatch" style="background:#F8F6EF;border-color:rgba(24,34,29,.18)"></span>
+                  <span><strong>Warm Cream</strong> #F8F6EF<em>Background. Paper, not screen.</em></span></li>
+                <li><span class="swatch" style="background:#DCEFE5"></span>
+                  <span><strong>Fresh Mint</strong> #DCEFE5<em>Supporting and positive states.</em></span></li>
+                <li><span class="swatch" style="background:#D5A83A"></span>
+                  <span><strong>Contribution Gold</strong> #D5A83A<em>Key moments &mdash; next to collect.</em></span></li>
+                <li><span class="swatch" style="background:#C94C4C"></span>
+                  <span><strong>Alert Red</strong> #C94C4C<em>Missed and overdue. Used sparingly.</em></span></li>
+              </ul>
+            </div>
+
+            <div class="brand-block">
+              <h3>Type</h3>
+              <p class="type-demo display-demo">DM Sans</p>
+              <p class="type-note">Display and headings. Warm, geometric, confident.</p>
+              <p class="type-demo body-demo">Inter</p>
+              <p class="type-note">Body, navigation, records and buttons. Built for small sizes and numbers.</p>
+
+              <h3 class="brand-subhead">Status language</h3>
+              <div class="stamp-legend brand-stamps">
+                <span class="stamp paid">Paid</span>
+                <span class="stamp pending">Pending</span>
+                <span class="stamp missed">Missed</span>
+                <span class="stamp next">Next to collect</span>
+                <span class="stamp collecting">Collecting</span>
+              </div>
+              <p class="type-note">
+                Five states, five words people already use. No jargon, and no
+                word that blames anyone.
+              </p>
             </div>
           </div>
+
+          <div class="donts">
+            <h3>What we ruled out</h3>
+            <ul class="cross-list dont-list">
+              <li>Looking like a bank, or like a spreadsheet</li>
+              <li>Fintech jargon &mdash; no wallets, no escrow, no yield</li>
+              <li>Shaming anyone for a missed payment</li>
+              <li>Hiding key information behind extra clicks</li>
+              <li>Decoration that does not help someone read the record</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <!-- CLOSING / MISSION -->
-      <section class="closing-section" id="get-started" aria-labelledby="closing-heading">
-        <div class="wrap closing-inner">
-          <div class="mark">
-            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M25 16a9 9 0 1 1-3.5-7.1" stroke="#F8F6EF" stroke-width="2.4" stroke-linecap="round"/>
-              <path d="M25 16 L21 12.5 M25 16 L20.5 17.5" stroke="#F8F6EF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <blockquote id="closing-heading">"Ajo should be easy to understand, even when the money is not yours alone."</blockquote>
-          <p class="support">
-            AjoFam isn't trying to change how people save together. It's
-            simply making the contributions, rotation and rules easier for
+      <section class="section section-ink">
+        <div class="wrap wrap-narrow mission-block">
+          <span class="mission-mark" aria-hidden="true"></span>
+          <blockquote>
+            Ajo should be easy to understand, even when the money is not yours
+            alone.
+          </blockquote>
+          <p class="lede">
+            AjoFam is not trying to change how people save together. It is
+            making the contributions, the rotation and the rules easier for
             everyone to see.
           </p>
-          <a class="button" href="request.html">Start your Ajo group</a>
-          <p class="tagline">Your contribution. Your turn. Your record.</p>
+          <p class="mission-tagline">Your contribution. Your turn. Your record.</p>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="wrap">
+          <p class="kicker">Work with the pod</p>
+          <h2>Questions about the build?</h2>
+          <p>
+            Whether you run an ajo group or just want to know how we made these
+            decisions, we are happy to talk.
+          </p>
+          <div class="button-row">
+            <a class="button on-ink has-arrow" href="contact.html">Contact Pod Cascade</a>
+          </div>
         </div>
       </section>
     </main>
@@ -196,27 +342,58 @@
     <footer class="site-footer">
       <div class="wrap">
         <div class="footer-grid">
-          <div>
-            <div class="footer-brand">Ajo<span>Fam</span></div>
-            <p>Your contribution. Your turn. Your record.</p>
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
           </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
-            <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
           </div>
-          <div>
-            <h4>Navigate</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="contact.html">Contact</a>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <span>&copy; 2026 AjoFam</span>
-          <span>A simple digital home for Ajo groups.</span>
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
         </div>
       </div>
     </footer>
+
+    <script src="js/site.js" defer></script>
   </body>
 </html>

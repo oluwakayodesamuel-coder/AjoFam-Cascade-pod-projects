@@ -1,196 +1,355 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajo & Esusu Transparency — Group Detail Page</title>
-  <link rel="stylesheet" href="Css-style/Brand.css">
-  <link rel="stylesheet" href="Css-style/details.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Details &mdash; AjoFam</title>
+    <meta name="description" content="One member's full AjoFam record: every contribution by week, how it was paid, what a missed week meant, and the group terms it all runs under." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="The Details &mdash; AjoFam" />
+    <meta property="og:description" content="One member's full AjoFam record: every contribution by week, how it was paid, what a missed week meant, and the group terms it all runs under." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css-style/Brand.css" />
+    <link rel="stylesheet" href="Css-style/details.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">
-        <img
-          src="image/Ajo-fam-logo.png"
-          alt="AjoFam logo"
-          width="150"
-          height="120"
-        />
-        <span class="brand-word">Ajo<span>Fam</span></span>
-      </a>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-      <ul class="nav-links">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="problem.html">The Problem</a></li>
         <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="dashboard.html">The Main Page</a></li>
-        <li><a href="details.html" class="active" aria-current="page">The Details</a></li>
-        <li><a href="trust.html">Trust &amp; Verification</a></li>
-        <li><a href="request.html">Get Started</a></li>
+        <li class="nav-item-has-sub is-current">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html" aria-current="page">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
         <li><a href="faq.html">Guide &amp; FAQ</a></li>
         <li><a href="pod.html">The Pod</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a class="button small" href="request.html">Start your Ajo group</a>
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-        ☰
-      </label>
-    </div>
-  </header>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
+        </ul>
 
-  <main>
-    <!-- DETAIL HEADER / OVERVIEW -->
-    <section class="hero" style="min-height: auto; padding: 48px 0;">
-      <div class="wrap">
-        <div class="hero-tag">Active Circle Detail</div>
-        <h1 class="headline">Central Market Traders — Cycle #04</h1>
-        <p class="subhead">
-          Real-time transparency ledger for <strong>12 active members</strong>. Contributions are verified weekly on-chain and recorded below.
-        </p>
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
 
-        <!-- CYCLE METRICS BAR -->
-        <div class="ledger-card" style="margin-top: 32px;">
-          <div class="ledger-head">
-            <span class="cycle">Total Pool Size: ₦1,200,000</span>
-            <span class="amount">Weekly Contribution: ₦100,000 / member</span>
-          </div>
-          <div class="next-banner">
-            <span>Next Payout Beneficiary: <strong>Blessing Okon (Week 5)</strong></span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
 
-    <!-- MAIN DETAIL CONTENT GRID -->
-    <section class="wrap" style="padding-bottom: 64px;">
-      <div class="hero-grid" style="align-items: start;">
-        
-        <!-- LEFT COLUMN: Circle Specifications & Rules -->
-        <div>
-          <h2 style="font-family: 'DM Sans', sans-serif; color: #0f4e38; margin-bottom: 16px;">Circle Parameters</h2>
-          <div class="problem-card" style="border-left-color: #176b4d; margin-bottom: 16px;">
-            <h3 style="color: #0f4e38;">Rotation Schedule</h3>
-            <p>Weekly payouts every Friday at 4:00 PM. All 12 contributions must be completed by Thursday midnight.</p>
-          </div>
-
-          <div class="problem-card" style="border-left-color: #d5a83a; margin-bottom: 16px;">
-            <h3 style="color: #18221d;">Collateral &amp; Verification</h3>
-            <p>Every participant has deposited a 1-week security cushion into the smart lock escrow.</p>
-          </div>
-
-          <div class="problem-card" style="border-left-color: #0f4e38;">
-            <h3 style="color: #0f4e38;">Auditor Duty</h3>
-            <p>Managed under Pod Cascade. All transactions match the primary brand sheet and ledger hashes.</p>
+    <main id="main">
+      <section class="page-header">
+        <div class="wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">The Main Page</a></li>
+            <li>The Details</li>
+          </ol>
+          <div class="member-head">
+            <span class="avatar member-avatar" aria-hidden="true">AC</span>
+            <div>
+              <p class="kicker">Member record &middot; Ibadan Market Circle</p>
+              <h1>Amaka Chukwu</h1>
+              <p class="lede">
+                Seat 8 of 10. Joined the cycle on 5 January. Everything below is
+                the same record every member of the group can see &mdash; there
+                is no second, private version.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- RIGHT COLUMN: Member Breakdown Ledger -->
-        <div>
-          <h2 style="font-family: 'DM Sans', sans-serif; color: #0f4e38; margin-bottom: 16px;">Member Audit Roll</h2>
-          <div class="ledger-card">
-            
-            <div class="row">
-              <div class="avatar">01</div>
-              <div class="who">
-                <div class="name">Amina Yusuf</div>
-                <div class="meta">Payout Received • Week 1</div>
-              </div>
-              <span class="stamp paid">PAID</span>
+      <section class="section-tight">
+        <div class="wrap">
+          <h2 class="visually-hidden">Where Amaka stands</h2>
+          <div class="stat-grid">
+            <div class="stat">
+              <span class="stat-value">5</span>
+              <span class="stat-label">Contributions paid, of 6 due so far</span>
             </div>
-
-            <div class="row">
-              <div class="avatar">02</div>
-              <div class="who">
-                <div class="name">Emeka Okafor</div>
-                <div class="meta">Payout Received • Week 2</div>
-              </div>
-              <span class="stamp paid">PAID</span>
+            <div class="stat is-red">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Missed, in week 4 &mdash; since cleared</span>
             </div>
-
-            <div class="row">
-              <div class="avatar">03</div>
-              <div class="who">
-                <div class="name">Kemi Adebayo</div>
-                <div class="meta">Payout Received • Week 3</div>
-              </div>
-              <span class="stamp paid">PAID</span>
+            <div class="stat is-gold">
+              <span class="stat-value">Week 8</span>
+              <span class="stat-label">Her turn to collect</span>
             </div>
-
-            <div class="row">
-              <div class="avatar">04</div>
-              <div class="who">
-                <div class="name">Fatima Bello</div>
-                <div class="meta">Current Beneficiary • Week 4</div>
-              </div>
-              <span class="stamp next">IN PROGRESS</span>
+            <div class="stat">
+              <span class="stat-value">&#8358;90,000</span>
+              <span class="stat-label">Contributed into the pot to date</span>
             </div>
-
-            <div class="row">
-              <div class="avatar">05</div>
-              <div class="who">
-                <div class="name">Blessing Okon</div>
-                <div class="meta">Up Next • Week 5</div>
-              </div>
-              <span class="stamp pending">PENDING</span>
-            </div>
-
-            <div class="row">
-              <div class="avatar">06</div>
-              <div class="who">
-                <div class="name">Chidi Nwachukwu</div>
-                <div class="meta">Contribution Delayed • Week 4</div>
-              </div>
-              <span class="stamp missed">FLAGGED</span>
-            </div>
-
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    <!-- ACTION FOOTER SECTION -->
-    <section class="problem" style="padding: 48px 0;">
-      <div class="container" style="text-align: center;">
-        <h2>Verify Your Entry on the Ledger</h2>
-        <p class="subtext" style="margin: 12px auto 24px auto;">
-          Are you a member of this circle? Check your contribution hash or report a discrepancy directly to your pod leader.
-        </p>
-        <div class="hero-ctas">
-          <a href="#" class="button">Audit Contribution Hash</a>
+      <section class="section-tight">
+        <div class="wrap">
+          <article class="ledger-card" aria-labelledby="member-history">
+            <header class="ledger-head">
+              <span class="ledger-title" id="member-history">Contribution history</span>
+              <span class="ledger-amount">&#8358;15,000 weekly</span>
+            </header>
+            <p class="next-banner">Amaka collects in week 8 &mdash; two turns away</p>
+            <div class="table-scroll">
+              <table class="data-table detail-table">
+                <caption class="visually-hidden">
+                  Every contribution Amaka Chukwu has made this cycle
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-num">Week</th>
+                    <th scope="col">Due</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">How it was paid</th>
+                    <th scope="col" class="col-status">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-num">01</td>
+                    <td>5 January</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Cash to coordinator</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">02</td>
+                    <td>12 January</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Bank transfer</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">03</td>
+                    <td>19 January</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Cash to coordinator</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">04</td>
+                    <td>26 January</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Not received</span></td>
+                    <td class="col-status"><span class="stamp missed">Missed</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">05</td>
+                    <td>2 February</td>
+                    <td class="cell-amount">&#8358;30,000</td>
+                    <td><span class="cell-sub cell-note">Bank transfer &mdash; cleared week 4 carry-over</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">06</td>
+                    <td>9 February</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Cash to coordinator</span></td>
+                    <td class="col-status"><span class="stamp paid">Paid</span></td>
+                  </tr>
+                  <tr>
+                    <td class="col-num">07</td>
+                    <td>16 February</td>
+                    <td class="cell-amount">&#8358;15,000</td>
+                    <td><span class="cell-sub cell-note">Due Friday</span></td>
+                    <td class="col-status"><span class="stamp pending">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <footer class="ledger-foot">
+              <span>Nothing outstanding from earlier weeks</span>
+              <strong>&#8358;15,000 due Friday</strong>
+            </footer>
+          </article>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+
+      <section class="section">
+        <div class="wrap detail-grid">
+          <div>
+            <p class="kicker">What week 4 means</p>
+            <h2>A missed payment is a fact, not a verdict.</h2>
+            <p class="lede">
+              Amaka missed week 4. The record says so plainly, and it also says
+              what the group agreed would happen &mdash; and what has happened
+              since.
+            </p>
+
+            <div class="callout is-red">
+              <span class="callout-label">What happened</span>
+              <p>
+                The week 4 contribution of &#8358;15,000 was not received by the
+                Friday deadline.
+              </p>
+            </div>
+            <div class="callout is-gold">
+              <span class="callout-label">The rule the group agreed</span>
+              <p>
+                A missed contribution carries over and is added to the following
+                week. It does not reduce what is owed, and one miss does not
+                move anyone&rsquo;s seat.
+              </p>
+            </div>
+            <div class="callout">
+              <span class="callout-label">Where it stands now</span>
+              <p>
+                &#8358;30,000 was paid in week 5, clearing both weeks. Amaka
+                keeps seat 8 and nothing is outstanding from before this week.
+              </p>
+            </div>
+          </div>
+
+          <aside class="detail-side">
+            <h3>Group terms</h3>
+            <dl class="spec-list">
+              <div>
+                <dt>Group</dt>
+                <dd>Ibadan Market Circle</dd>
+              </div>
+              <div>
+                <dt>Contribution</dt>
+                <dd>&#8358;15,000 per member, per week</dd>
+              </div>
+              <div>
+                <dt>Schedule</dt>
+                <dd>Every Friday, deadline 6:00pm</dd>
+              </div>
+              <div>
+                <dt>Seats</dt>
+                <dd>10 members, 10-week cycle</dd>
+              </div>
+              <div>
+                <dt>Pot per turn</dt>
+                <dd>&#8358;150,000</dd>
+              </div>
+              <div>
+                <dt>Accepted payment</dt>
+                <dd>Cash to coordinator, bank transfer, mobile money</dd>
+              </div>
+              <div>
+                <dt>Coordinator</dt>
+                <dd>Oluwakayode Samuel Ojo</dd>
+              </div>
+              <div>
+                <dt>Cycle closes</dt>
+                <dd>Week 10, once every seat has collected</dd>
+              </div>
+            </dl>
+            <div class="button-row">
+              <a class="button ghost block" href="dashboard.html">Back to the group page</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-mint">
+        <div class="wrap wrap-narrow correction-block">
+          <p class="kicker">If something looks wrong</p>
+          <h2>Say so, and the group settles it together.</h2>
+          <p class="lede">
+            Records are entered by a person, and people make mistakes. If a
+            contribution you made is not showing, raise it with your coordinator
+            &mdash; corrections are made on the same page, in front of everyone,
+            so the fix is as visible as the error was.
+          </p>
+          <div class="button-row">
+            <a class="button" href="contact.html">Report a difference</a>
+            <a class="button ghost" href="trust.html">How a payment becomes a record</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">
       <div class="wrap">
         <div class="footer-grid">
-          <div>
-            <div class="footer-brand">Ajo<span>Fam</span></div>
-            <p>Your contribution. Your turn. Your record.</p>
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
           </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
-            <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
           </div>
-          <div>
-            <h4>Navigate</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="contact.html">Contact</a>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <span>&copy; 2026 AjoFam</span>
-          <span>A simple digital home for Ajo groups.</span>
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
         </div>
       </div>
     </footer>
 
-</body>
+    <script src="js/site.js" defer></script>
+  </body>
 </html>

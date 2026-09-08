@@ -1,144 +1,420 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajo and Esusu - Esusu, Transparency</title>
-  <link rel="stylesheet" href="Css-style/Brand.css">
-  <link rel="stylesheet" href="Css-style/trust.css">
-</head>
-<body>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trust &amp; Verification &mdash; AjoFam</title>
+    <meta name="description" content="How a contribution becomes a record in AjoFam, who can change it, how corrections work, and why AjoFam never holds or moves your group's money." />
+    <meta name="theme-color" content="#176B4D" />
+    <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="image/Ajo-fam-logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AjoFam" />
+    <meta property="og:title" content="Trust &amp; Verification &mdash; AjoFam" />
+    <meta property="og:description" content="How a contribution becomes a record in AjoFam, who can change it, how corrections work, and why AjoFam never holds or moves your group's money." />
+    <meta property="og:image" content="image/Ajo-fam-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css-style/Brand.css" />
+    <link rel="stylesheet" href="Css-style/trust.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Navigation -->
-  <header class="nav">
-    <div class="nav-inner">
+    <header class="site-header">
+      <nav class="nav-inner" aria-label="Primary">
         <a class="brand" href="index.html">
-          <img
-            src="image/Ajo-fam-logo.png"
-            alt="AjoFam logo"
-            width="150"
-            height="120"
-          />
-          <span class="brand-word">Ajo<span>Fam</span></span>
+          <img class="brand-mark" src="image/ajofam-mark.svg" alt="" width="38" height="38" />
+          <span>
+            <span class="brand-word">Ajo<span>Fam</span></span>
+            <span class="brand-tag">Your turn, in writing</span>
+          </span>
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="problem.html">The Problem</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="dashboard.html">The Main Page</a></li>
-          <li><a href="details.html">The Details</a></li>
-          <li><a href="trust.html">Trust &amp; Verification</a></li>
-          <li><a href="request.html">Get Started</a></li>
-          <li><a href="faq.html">Guide &amp; FAQ</a></li>
-          <li><a href="pod.html">The Pod</a></li>
-          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+
+        <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="problem.html">The Problem</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li class="nav-item-has-sub is-current">
+          <button type="button" class="nav-sub-toggle" aria-expanded="false" aria-controls="nav-group-page">The Group Page <span class="chev" aria-hidden="true"></span></button>
+          <ul class="nav-sub" id="nav-group-page">
+            <li><a href="dashboard.html">The Main Page<span class="sub-note">Whose turn it is, right now</span></a></li>
+            <li><a href="details.html">The Details<span class="sub-note">One member, one full record</span></a></li>
+            <li><a href="trust.html" aria-current="page">Trust &amp; Verification<span class="sub-note">How a payment becomes a record</span></a></li>
+          </ul>
+        </li>
+        <li><a href="faq.html">Guide &amp; FAQ</a></li>
+        <li><a href="pod.html">The Pod</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-drawer-cta"><a class="button" href="request.html">Start your Ajo group</a></li>
         </ul>
-        <a class="button small" href="request.html">Start your Ajo group</a>
-        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
-          ☰
-        </label>
-      </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <span class="hero-tag">Transparent Savings</span>
-          <div class="eyebrow-line">
-            <span class="mark">&#10003;</span>
-            <span>Trusted Community Circles</span>
-          </div>
-          <h1 class="headline">Automate your Ajo circles with full transparency.</h1>
-          <p class="subhead">
-            No hidden fees, no lost records. <strong>Track contributions, payout order, and member statuses</strong> seamlessly.
+        <a class="button small nav-cta" href="request.html">Start your Ajo group</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="nav-scrim" aria-hidden="true"></div>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="wrap">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">The Main Page</a></li>
+            <li>Trust &amp; Verification</li>
+          </ol>
+          <p class="kicker">Trust &amp; verification</p>
+          <h1>The record is only worth what it can be checked against.</h1>
+          <p class="lede">
+            AjoFam asks your group to rely on a page. That is a fair thing to be
+            careful about &mdash; so here is exactly how a payment becomes a
+            record, who can change it, and what we do not do.
           </p>
-          <div class="hero-ctas">
-            <a href="request.html" class="button">Start Your Pod</a>
-          </div>
-          <p class="hero-note">Join hundreds of members building wealth together.</p>
         </div>
+      </section>
 
-        <!-- Ledger Card Visual -->
-        <div class="ledger-card">
-          <div class="ledger-head">
-            <div>
-              <div class="ledger-name">Monthly Circle #4</div>
-              <div class="cycle">Cycle 3 of 10</div>
-            </div>
-            <div class="amount">&#8358;50,000 / month</div>
-          </div>
-          <div class="next-banner">
-            <span>&#9200;</span> Next Payout: Fatima (Oct 1st)
-          </div>
-          
-          <div class="row">
-            <div class="avatar">AO</div>
-            <div class="who">
-              <div class="name">Amina O.</div>
-              <div class="meta">Paid Sep 1</div>
-            </div>
-            <span class="stamp paid">Paid</span>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">The boundary</p>
+            <h2>AjoFam never touches your money</h2>
+            <p class="lede">
+              This is the most important thing on this page. AjoFam is a record,
+              not a bank and not a wallet. Contributions move exactly the way
+              your group already moves them.
+            </p>
           </div>
 
-          <div class="row">
-            <div class="avatar">FK</div>
-            <div class="who">
-              <div class="name">Fatima K.</div>
-              <div class="meta">Next Receiver</div>
+          <div class="boundary-grid">
+            <div class="boundary-col is-no">
+              <h3>What AjoFam does not do</h3>
+              <ul class="cross-list">
+                <li>Hold, receive or move your contributions</li>
+                <li>Take a cut, a fee or interest from the pot</li>
+                <li>Decide who collects, or change your rotation</li>
+                <li>Lend money, or offer any credit product</li>
+                <li>Report anyone to anyone</li>
+              </ul>
             </div>
-            <span class="stamp next">Next</span>
-          </div>
-
-          <div class="row">
-            <div class="avatar">EB</div>
-            <div class="who">
-              <div class="name">Emeka B.</div>
-              <div class="meta">Due Sep 28</div>
+            <div class="boundary-col is-yes">
+              <h3>What AjoFam does</h3>
+              <ul class="checklist">
+                <li>Write down what the group agreed, once</li>
+                <li>Record each contribution as paid, pending or missed</li>
+                <li>Show the same record to every member at the same time</li>
+                <li>Remind people before a deadline, not after</li>
+                <li>Keep the history so nobody has to remember it</li>
+              </ul>
             </div>
-            <span class="stamp pending">Pending</span>
-          </div>
-
-          <div class="row">
-            <div class="avatar">DA</div>
-            <div class="who">
-              <div class="name">David A.</div>
-              <div class="meta">Overdue</div>
-            </div>
-            <span class="stamp missed">Missed</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+
+      <section class="section section-mint">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Verification</p>
+            <h2>How a payment becomes a record</h2>
+            <p class="lede">
+              Four steps, and a member can check their own entry at every one of
+              them.
+            </p>
+          </div>
+
+          <div class="steps cols-2 reveal">
+            <article class="step">
+              <span class="step-number">01</span>
+              <div>
+                <h3>The member pays</h3>
+                <p>
+                  Cash to the coordinator, a bank transfer or mobile money
+                  &mdash; whichever methods the group agreed when it was set up.
+                </p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <div>
+                <h3>The coordinator marks it</h3>
+                <p>
+                  The contribution is marked paid on the group page, on the same
+                  day, with the date and the method it came in by.
+                </p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <div>
+                <h3>The whole group sees it</h3>
+                <p>
+                  Every member is looking at the same page. A record that only
+                  one person can see is the problem we started with.
+                </p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-number">04</span>
+              <div>
+                <h3>The member checks their own line</h3>
+                <p>
+                  This is the step that does the work. If your name does not
+                  show paid for the week, say so straight away &mdash; not three
+                  cycles later.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout is-gold verify-note">
+            <span class="callout-label">The honest version</span>
+            <p>
+              A transfer screenshot on your phone is not proof to the group
+              &mdash; it is proof to you. It becomes the group&rsquo;s record
+              when it appears on the group page, which is why checking your own
+              line after you pay matters more than keeping the screenshot.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Who can do what</p>
+            <h2>One person writes. Everybody reads.</h2>
+            <p class="lede">
+              Ajo already works this way &mdash; one coordinator collects and
+              keeps the book. AjoFam keeps that arrangement, and removes the
+              part where only they can see it.
+            </p>
+          </div>
+
+          <div class="table-scroll">
+            <table class="data-table roles-table">
+              <caption class="visually-hidden">
+                What each role in an AjoFam group can see and change
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Action</th>
+                  <th scope="col">Member</th>
+                  <th scope="col">Coordinator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="cell-name">See the full rotation</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">See every member&rsquo;s status</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">See the group&rsquo;s rules</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">Mark a contribution paid</span></td>
+                  <td><span class="stamp missed">No</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">Change the rotation order</span></td>
+                  <td><span class="stamp missed">No</span></td>
+                  <td>
+                    <span class="stamp next">By group agreement</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">Raise a correction</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                  <td><span class="stamp paid">Yes</span></td>
+                </tr>
+                <tr>
+                  <td><span class="cell-name">Delete history</span></td>
+                  <td><span class="stamp missed">No</span></td>
+                  <td><span class="stamp missed">No</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            A correction never erases what was there. The original entry stays,
+            with the correction shown beside it and dated &mdash; so the fix is
+            as visible as the mistake.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-ink">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">If the group disagrees</p>
+            <h2>What to do when the record and a member don&rsquo;t match</h2>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <span class="card-index">01</span>
+              <h3>Raise it the same week</h3>
+              <p>
+                Differences are easy to settle while the week is fresh and
+                whoever handed over the money still remembers it.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-index">02</span>
+              <h3>Bring what you have</h3>
+              <p>
+                A transfer reference, a date, the person who witnessed the cash.
+                The record is corrected on evidence, not on volume.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card-index">03</span>
+              <h3>The group decides, in the open</h3>
+              <p>
+                The correction is applied on the same page everyone reads, so no
+                private side-agreement can contradict it later.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-paper">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Your information</p>
+            <h2>What we keep, and why</h2>
+          </div>
+
+          <div class="card-grid cols-2">
+            <article class="card">
+              <h3>Only what the record needs</h3>
+              <p>
+                A name your group recognises, a contact for reminders, your seat
+                and your contributions. We do not ask for bank credentials, a
+                BVN, or anything a savings notebook would never have held.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Visible to your group only</h3>
+              <p>
+                Your record is shared with the members of your own group,
+                because that is the entire point. It is not sold, not published,
+                and not shown to other groups.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Missed payments stay internal</h3>
+              <p>
+                A missed contribution is information for your group and nothing
+                more. It is not a credit score, it does not follow you, and it
+                is not reported anywhere outside the group.
+              </p>
+            </article>
+            <article class="card">
+              <h3>The history stays yours</h3>
+              <p>
+                When a cycle closes, the record of it remains readable to the
+                group. Closing a cycle should not mean losing the proof that it
+                happened.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="wrap">
+          <p class="kicker">Still have a question?</p>
+          <h2>Ask before you commit your group.</h2>
+          <p>
+            A real person from Pod Cascade will answer. If AjoFam is not right
+            for how your group runs, we would rather tell you now.
+          </p>
+          <div class="button-row">
+            <a class="button on-ink has-arrow" href="contact.html">Talk to us</a>
+            <a class="button ghost on-ink" href="faq.html">Read the guide &amp; FAQ</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">
       <div class="wrap">
         <div class="footer-grid">
-          <div>
-            <div class="footer-brand">Ajo<span>Fam</span></div>
-            <p>Your contribution. Your turn. Your record.</p>
+          <div class="footer-col">
+            <a class="footer-brand" href="index.html">
+              <img src="image/ajofam-mark.svg" alt="" width="34" height="34" />
+              <span>Ajo<span>Fam</span></span>
+            </a>
+            <p class="footer-tagline">
+              Your contribution. Your turn. Your record. A simple digital home
+              for ajo, esusu and adashe groups.
+            </p>
           </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a>
-            <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">WhatsApp: 0813 480 6343</a>
+
+          <div class="footer-col">
+            <h4>The site</h4>
+            <ul class="footer-links">
+              <li><a href="problem.html">The Problem</a></li>
+              <li><a href="how-it-works.html">How It Works</a></li>
+              <li><a href="dashboard.html">The Main Page</a></li>
+              <li><a href="details.html">The Details</a></li>
+            </ul>
           </div>
-          <div>
-            <h4>Navigate</h4>
-            <a href="index.html">Home</a>
-            <a href="how-it-works.html">How It Works</a>
-            <a href="contact.html">Contact</a>
+
+          <div class="footer-col">
+            <h4>Get going</h4>
+            <ul class="footer-links">
+              <li><a href="request.html">Start your Ajo group</a></li>
+              <li><a href="trust.html">Trust &amp; Verification</a></li>
+              <li><a href="faq.html">Guide &amp; FAQ</a></li>
+              <li><a href="pod.html">The Pod</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Talk to us</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:ajofambuild@gmail.com">ajofambuild@gmail.com</a></li>
+              <li>
+                <a href="https://wa.me/2348134806343" target="_blank" rel="noopener">
+                  WhatsApp 0813 480 6343
+                </a>
+              </li>
+              <li><a href="contact.html">Contact page</a></li>
+            </ul>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <span>&copy; 2026 AjoFam</span>
-          <span>A simple digital home for Ajo groups.</span>
+          <span>&copy; <span data-year>2026</span> AjoFam &middot; Built by Pod Cascade</span>
+          <span>Bringing clarity to the money, so the trust can stay with the people.</span>
         </div>
       </div>
     </footer>
 
-</body>
+    <script src="js/site.js" defer></script>
+  </body>
 </html>
