@@ -132,8 +132,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 ::selection { background: var(--mint); color: var(--green-ink); }
 
 /* ---------- 3. Layout helpers ---------- */
-.wrap,
-.container {
+.wrap {
   width: 100%;
   max-width: var(--container);
   margin-inline: auto;
@@ -183,8 +182,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 }
 
 /* ---------- 4. Section headings ---------- */
-.kicker,
-.eyebrow {
+.kicker {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -210,19 +208,15 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head.center .kicker { justify-content: center; }
 
-.lede,
-.section-sub,
-.subtext {
+.lede {
   font-size: var(--step-1);
   color: var(--ink-muted);
   max-width: 62ch;
   margin: 0;
   text-wrap: pretty;
 }
-.section-head.center .lede,
-.section-head.center .section-sub { margin-inline: auto; }
-.section-ink .lede,
-.section-ink .section-sub { color: rgba(248, 246, 239, 0.75); }
+.section-head.center .lede { margin-inline: auto; }
+.section-ink .lede { color: rgba(248, 246, 239, 0.75); }
 
 /* ---------- 5. Buttons ---------- */
 .button {
@@ -1101,6 +1095,7 @@ body.nav-open .nav-scrim { opacity: 1; visibility: visible; }
   display: grid;
   gap: 1.15rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  margin-bottom: 1.15rem;
 }
 .field { display: block; margin-bottom: 1.15rem; border: 0; padding: 0; min-width: 0; }
 .form-grid .field { margin-bottom: 0; }

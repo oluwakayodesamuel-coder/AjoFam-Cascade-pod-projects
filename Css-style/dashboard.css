@@ -27,12 +27,10 @@
 }
 
 .dash-grid .data-table { min-width: 340px; }
-.dash-grid .table-scroll { max-height: 520px; overflow-y: auto; }
 
 .missed-note { margin-top: 1.5rem; }
 
 @media (max-width: 860px) {
   .dash-head-row { grid-template-columns: 1fr; align-items: start; }
   .dash-stats { margin-top: 0; }
-  .dash-grid .table-scroll { max-height: none; }
 }

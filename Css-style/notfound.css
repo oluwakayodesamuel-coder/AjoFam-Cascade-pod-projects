@@ -1,0 +1,60 @@
+/* AjoFam — 404 */
+
+.notfound {
+  display: grid;
+  align-items: center;
+  min-height: min(72vh, 640px);
+  background: linear-gradient(180deg, var(--mint-soft) 0%, var(--cream) 70%);
+}
+.notfound-inner { text-align: center; }
+
+.notfound-mark {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 1.5rem;
+  background: var(--gold);
+  -webkit-mask: var(--ico-loop) center / contain no-repeat;
+  mask: var(--ico-loop) center / contain no-repeat;
+}
+
+.notfound-inner .kicker { justify-content: center; }
+.notfound-inner h1 { margin-inline: auto; max-width: 18ch; }
+.notfound-inner .lede { margin-inline: auto; }
+.notfound-inner .button-row { justify-content: center; }
+
+.notfound-links {
+  margin-top: clamp(2.25rem, 5vw, 3.25rem);
+  padding-top: clamp(1.75rem, 4vw, 2.25rem);
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+.notfound-links h2 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.notfound-links ul {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.notfound-links li {
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+.notfound-links a { font-weight: 600; text-decoration: none; }
+.notfound-links a:hover { text-decoration: underline; }

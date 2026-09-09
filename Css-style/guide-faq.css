@@ -60,7 +60,7 @@
 }
 .faq-nav ul { list-style: none; margin: 0; padding: 0; }
 .faq-nav li { margin-bottom: 0.15rem; }
-.faq-nav a {
+.faq-nav ul a {
   display: block;
   padding: 0.5rem 0.65rem;
   border-radius: var(--radius-sm);
@@ -70,7 +70,7 @@
   text-decoration: none;
   transition: background 0.18s var(--ease), color 0.18s var(--ease);
 }
-.faq-nav a:hover {
+.faq-nav ul a:hover {
   background: var(--mint);
   color: var(--green-deep);
 }
@@ -124,7 +124,7 @@
     gap: 0.4rem;
   }
   .faq-nav li { margin: 0; }
-  .faq-nav a {
+  .faq-nav ul a {
     background: var(--surface-raised);
     border: 1px solid var(--line-mint);
   }
